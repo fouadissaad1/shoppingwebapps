@@ -303,7 +303,7 @@ export const Kids_data = [
 
     },
     {
-        name: "Leggings",
+        name: "Leggings Girl",
         KidPruducts: [
             {
                 id: 1,
@@ -328,7 +328,7 @@ export const Kids_data = [
         ]
     },
     {
-        name: "Skirts & Shorts",
+        name: "Skirts & Shorts Girl",
         KidPruducts: [
             {
                 id: 1,
@@ -356,7 +356,7 @@ export const Kids_data = [
     },
     {
         title: "Boy",
-        name: "Accesoires",
+        name: "Accesoires Boy",
         KidPruducts: [
             {
                 id: 1,
@@ -382,7 +382,7 @@ export const Kids_data = [
         ]
     },
     {
-        name: "Outerwear",
+        name: "Outerwear Boy",
         KidPruducts: [
             {
                 id: 1,
@@ -409,7 +409,7 @@ export const Kids_data = [
 
     },
     {
-        name: "Shorts",
+        name: "Shorts Boy",
         KidPruducts: [
             {
                 id: 1,
@@ -437,7 +437,7 @@ export const Kids_data = [
     },
     {
         title: "Baby",
-        name: "Clothing",
+        name: "Clothing Baby",
         KidPruducts: [
             {
                 id: 1,
@@ -464,7 +464,7 @@ export const Kids_data = [
 
     },
     {
-        name: "Shoes",
+        name: "Shoes Baby",
         KidPruducts: [
             {
                 id: 1,
@@ -491,7 +491,7 @@ export const Kids_data = [
 
     },
     {
-        name: "Dresses",
+        name: "Dresses Baby",
         KidPruducts: [
             {
                 id: 1,
