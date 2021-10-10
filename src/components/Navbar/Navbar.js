@@ -4,7 +4,7 @@ import { MDBNav } from "mdbreact";
 import { About } from "../../pages/About";
 import {Contact} from "../../pages/Contact";
 import Children from "../../pages/Children";
-import Women from "../../pages/Women";
+import { Womens } from "../../pages/Women";
 import Men from "../../pages/Men";
 import Home from "../../pages/Home";
 
@@ -23,13 +23,13 @@ function NavBar() {
                             <Link to="/">Home</Link>
                         </li>
                         <li>
-                            <Link to="/MEN">MEN'S WEAR</Link>
+                            <Link to="/Men">MEN'S WEAR</Link>
                         </li>
                         <li>
-                            <Link to="/WOMEN">WOMEN'S WEAR</Link>
+                            <Link to="/Women">WOMEN'S WEAR</Link>
                         </li>
                         <li>
-                            <Link to="/CHILDREN">CHILDREN</Link>
+                            <Link to="/Children">CHILDREN</Link>
                         </li>
                         <li>
                             <Link to="/about">About</Link>
@@ -62,7 +62,7 @@ function NavBar() {
 
                     </Route>
                     {/* eslint-disable-next-line no-undef */}
-                    <Route path="/WOMEN" component={Women}>
+                    <Route path="/WOMEN" component={Womens}>
 
 
                     </Route>
