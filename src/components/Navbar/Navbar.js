@@ -1,6 +1,7 @@
+import './Navbar.css';
 import React, { useState } from "react";
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
-import { MDBNav } from "mdbreact";
+import { MDBAnimation, MDBNav } from "mdbreact";
 import { About } from "../../pages/About";
 import {Contact} from "../../pages/Contact";
 import Children from "../../pages/Children";
@@ -15,30 +16,37 @@ function NavBar() {
         <Router>
             <div>
                 {/* eslint-disable-next-line react/jsx-no-undef */}
-                <MDBNav>
-                    <div className="logo">Shopping</div>
-                    <ul className="nav-links" style={{transform: open ? "translateX(0px)" :"translateX(-500px)"}}>
+                <MDBNav className="navbar" color="indigo" dark expand="md">
+                    <div className="brand-title">
+                        <MDBAnimation type="bounce" infinite>
+                            <h3>Shopping</h3>
+                        </MDBAnimation>
+                    </div>
+                    <div className="navbar-links" >
+                        <ul style={{transform: open ? "translateX(0px)" :"translateX(-500px)"}}>
 
-                        <li>
-                            <Link to="/">Home</Link>
-                        </li>
-                        <li>
-                            <Link to="/Men">MEN'S WEAR</Link>
-                        </li>
-                        <li>
-                            <Link to="/Women">WOMEN'S WEAR</Link>
-                        </li>
-                        <li>
-                            <Link to="/Children">CHILDREN</Link>
-                        </li>
-                        <li>
-                            <Link to="/about">About</Link>
-                        </li>
-                        <li>
-                            <Link to="/Contact">Contact</Link>
-                        </li>
-                    </ul>
-                    <i onClick={()=>setOpen(!open)} className="fas fa-bars burger"></i>
+                            <li>
+                                <Link to="/">Home</Link>
+                            </li>
+                            <li>
+                                <Link to="/Men">MEN'S WEAR</Link>
+                            </li>
+                            <li>
+                                <Link to="/Women">WOMEN'S WEAR</Link>
+                            </li>
+                            <li>
+                                <Link to="/Children">CHILDREN</Link>
+                            </li>
+                            <li>
+                                <Link to="/about">About</Link>
+                            </li>
+                            <li>
+                                <Link to="/Contact">Contact</Link>
+                            </li>
+                        </ul>
+                        <i onClick={()=>setOpen(!open)} className="fas fa-bars burger"></i>
+                    </div>
+
 
                 </MDBNav>
 
