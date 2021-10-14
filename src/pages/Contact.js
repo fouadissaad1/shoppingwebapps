@@ -1,6 +1,8 @@
 import { MDBBtn, MDBCol, MDBCollapse, MDBRow } from "mdb-react-ui-kit";
 import React, { useState } from "react";
 import { Business, Consumer, ContactInformation, Payments, ServiceWarranty } from "../components/contactInformation/ContactInformation";
+import '../services/firestore'
+
 export function Contact(){
     const [showShow, setShowShow] = useState(false);
     const toggleShow = () => setShowShow(!showShow);
@@ -49,6 +51,7 @@ export function Contact(){
                     <MDBCol lg={1}></MDBCol>
                 </MDBRow>
                 <MDBRow></MDBRow>
+
             </React.Fragment>
         </>
     )
