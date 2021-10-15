@@ -8,6 +8,9 @@ import Children from "../../pages/Children";
 import { Womens } from "../../pages/Women";
 import Men from "../../pages/Men";
 import Home from "../../pages/Home";
+import Login from "../../pages/Login";
+
+
 
 
 function NavBar() {
@@ -42,6 +45,9 @@ function NavBar() {
                             </li>
                             <li>
                                 <Link to="/Contact">Contact</Link>
+                            </li>
+                            <li>
+                                <Link to={"/Login"}>Login</Link>
                             </li>
                         </ul>
                         <i onClick={()=>setOpen(!open)} className="fas fa-bars burger"></i>
@@ -85,8 +91,13 @@ function NavBar() {
                     <Route path="/Contact" component={Contact}>
 
                     </Route>
+                    {/* eslint-disable-next-line no-undef */}
+                    <Route exact path="/login">
+                        <Login />
+                    </Route>
 
                 </Switch>
+
             </div>
         </Router>
     );

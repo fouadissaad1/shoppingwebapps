@@ -1,4 +1,4 @@
-export function services(){
+export function Services(){
     return (
         <div>
             <h3>Services</h3>
@@ -6,5 +6,4 @@ export function services(){
     )
 }
 
-export default class Services {
-}
+export default Services;

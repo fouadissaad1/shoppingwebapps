@@ -8,8 +8,10 @@ import { MDBCol, MDBContainer, MDBFooter, MDBRow } from "mdbreact";
 
 
 
+
 function Footer() {
     return (
+
         <MDBFooter color="blue" className="font-small pt-6 mt-4">
             <MDBContainer fluid className="text-center text-md-left">
                 <MDBRow>
@@ -17,7 +19,7 @@ function Footer() {
                         <h5 className="text-uppercase mb-4 mt-3 font-weight-bold">Exclusive Services</h5>
                         <ul className="list-unstyled">
                             <li>
-                                <a href="/src/pages/Book.js">Book an Appointement</a>
+                                  <a href="/Book">Book an Appointement</a>
                             </li>
                             <li>
                                 <a href="/Services">Exclusive Online Services</a>
