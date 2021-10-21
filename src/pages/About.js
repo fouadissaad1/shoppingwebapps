@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { MDBCol, MDBContainer, MDBRow } from "mdb-react-ui-kit";
 import { AboutCon, Teams } from "../components/aboutCon/AboutCon";
 import '../services/firestore';
-import firestore from "../services/firestore";
+import firestore from "firebase/compat";
 
 
 
@@ -10,9 +10,6 @@ export function About(){
     const [teamsList, setTeamsList]=useState([]);
     const [loading, setLoading]=useState(false);
     const ref=firestore.firestore().collection("teams");
-
-
-
     function getTeams(){
         setLoading(true);
         ref.onSnapshot((querySnapshot) =>{
@@ -25,17 +22,12 @@ export function About(){
             setLoading(false);
         });
     }
-
     useEffect(()=>{
         getTeams();
     },[]);
-
-
-
     if (loading){
         return <h1>loading...</h1>
     }
-
     return(
         <>
             <MDBContainer>

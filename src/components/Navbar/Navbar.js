@@ -7,8 +7,9 @@ import {Contact} from "../../pages/Contact";
 import Children from "../../pages/Children";
 import { Womens } from "../../pages/Women";
 import Men from "../../pages/Men";
-import Home from "../../pages/Home";
+import Home from "../pages/Home";
 import Login from "../../pages/Login";
+import Book from "../../pages/Book";
 
 
 
@@ -26,6 +27,7 @@ function NavBar() {
                         </MDBAnimation>
                     </div>
                     <div className="navbar-links" >
+
                         <ul style={{transform: open ? "translateX(0px)" :"translateX(-500px)"}}>
 
                             <li>
@@ -50,6 +52,7 @@ function NavBar() {
                                 <Link to={"/Login"}>Login</Link>
                             </li>
                         </ul>
+                        <Link to={"/Book"}></Link>
                         <i onClick={()=>setOpen(!open)} className="fas fa-bars burger"></i>
                     </div>
 
@@ -95,6 +98,8 @@ function NavBar() {
                     <Route exact path="/login">
                         <Login />
                     </Route>
+                    <Router  path="/book" component={Book}>
+                    </Router>
 
                 </Switch>
 

@@ -1,7 +1,8 @@
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
-import React from "react";
+import '../services/firestore'
+import React, { useEffect, useState } from "react";
 import { MEN_CLOTHING_DATA } from "../data/data";
 import {
     MDBBtn,
@@ -13,6 +14,9 @@ import {
     MDBContainer,
     MDBRow
 } from "mdb-react-ui-kit";
+import firestore from "firebase/compat";
+
+
 function Category(props) {
     const {category} = props;
     return <div>
@@ -46,7 +50,32 @@ function Man(props) {
         </MDBContainer>
     );
 }
-function Men(){
+export function Men(){
+
+    const [mensList, setmensList]=useState([]);
+    const [loading, setLoading]=useState(false);
+    const ref=firestore.firestore().collection("mens");
+    console.log(getMens)
+    function getMens(){
+        setLoading(true);
+        ref.onSnapshot((querySnapshot) =>{
+            const items=[];
+            querySnapshot.forEach((doc)=>{
+                items.push(doc.data());
+                console.log(doc.data())
+            });
+            setmensList(items);
+            setLoading(false);
+        });
+    }
+    useEffect(()=>{
+        getMens();
+    },[]);
+    if (loading){
+        return <h1>loading...</h1>
+    }
+console.log(mensList)
+
     return(
         <>
             <MDBContainer fluid>
@@ -60,7 +89,9 @@ function Men(){
                             <Category category={c} key={i}/>
                         </MDBCol>
                     )}
+
                 </MDBRow>
+
             </MDBContainer>
         </>
     )

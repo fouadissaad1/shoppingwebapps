@@ -1,9 +1,9 @@
 import { MDBCol, MDBContainer, MDBIcon, MDBRow } from "mdbreact";
 import React from "react";
-import welkomCoatsForWomen from '../images/welcome/abdf6295852cb3fa42bb5b55556848a6.jpg';
-import welkomCoatsForMen from '../images/welcome/diy-cat-costumes-1565110063.jpg';
-import welkomCoatsForChilderen from '../images/welcome/JenniferKellyG-201635210035178721None.jpg';
-import welkomCoatsFkid2 from '../images/welcome/kids1.jpg';
+import welkomCoatsForWomen from '../../images/welcome/abdf6295852cb3fa42bb5b55556848a6.jpg';
+import welkomCoatsForMen from '../../images/welcome/diy-cat-costumes-1565110063.jpg';
+import welkomCoatsForChilderen from '../../images/welcome/JenniferKellyG-201635210035178721None.jpg';
+import welkomCoatsFkid2 from '../../images/welcome/kids1.jpg';
 
 function Home() {
     return (
@@ -46,5 +46,4 @@ function Home() {
         </>
     )
 }
-
 export default Home
