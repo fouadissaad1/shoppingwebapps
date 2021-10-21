@@ -15,10 +15,22 @@ const Header = () => {
                                 <NavLink to="/" className="nav-link" aria-current="page">Home</NavLink>
                             </li>
                             <li className="navbar-item">
-                                <NavLink to="/about" className="nav-link">About</NavLink>
+                                <NavLink to="/Men" className="nav-link">MEN'S WEAR</NavLink>
                             </li>
                             <li className="navbar-item">
-                                <NavLink to="/privacy" className="nav-link">Privacy</NavLink>
+                                <NavLink to="/Women" className="nav-link">WOMEN'S WEAR</NavLink>
+                            </li>
+                            <li className="navbar-item">
+                                <NavLink to="/Children" className="nav-link">CHILDREN</NavLink>
+                            </li>
+                            <li className="navbar-item">
+                                <NavLink to="/About" className="nav-link">About</NavLink>
+                            </li>
+                            <li className="navbar-item">
+                                <NavLink to="/Contact" className="nav-link">Contact</NavLink>
+                            </li>
+                            <li className="navbar-item">
+                                <NavLink to="/Login" className="nav-link">Login</NavLink>
                             </li>
                         </ul>
                     </div>

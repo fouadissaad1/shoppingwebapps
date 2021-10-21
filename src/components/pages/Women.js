@@ -1,5 +1,5 @@
 import React from "react";
-import { WOMEN_CLOTHING_DATA } from "../data/data";
+import { WOMEN_CLOTHING_DATA } from "../../data/data";
 import {
     MDBBtn,
     MDBCard, MDBCardBody, MDBCardText, MDBCardTitle,

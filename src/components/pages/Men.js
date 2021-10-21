@@ -1,9 +1,9 @@
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
-import '../services/firestore'
+import '../../services/firestore'
 import React, { useEffect, useState } from "react";
-import { MEN_CLOTHING_DATA } from "../data/data";
+import { MEN_CLOTHING_DATA } from "../../data/data";
 import {
     MDBBtn,
     MDBCard,

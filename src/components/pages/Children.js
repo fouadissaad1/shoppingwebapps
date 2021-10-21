@@ -10,7 +10,7 @@ import {
     MDBContainer,
     MDBRow
 } from "mdb-react-ui-kit";
-import { Kids_data } from "../data/data";
+import { Kids_data } from "../../data/data";
 function Category(props) {
     const {category} = props;
     const [show, setShow] = useState(!false);
