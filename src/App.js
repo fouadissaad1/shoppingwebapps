@@ -13,6 +13,9 @@ import Men from "./components/pages/Men";
 import Login from "./components/pages/Login/Login";
 import Contact from "./components/pages/Contact";
 import Women from "./components/pages/Women";
+import Book from "./components/pages/Book";
+import Services from "./components/pages/Services";
+import Delivery from "./components/pages/Delivery";
 
 function App() {
 
@@ -29,7 +32,9 @@ function App() {
                   <Route path="/About" component={ About } />
                   <Route path="/Contact" component={ Contact } />
                   <Route path="/Login" component={ Login } />
-
+                  <Route path="/Book" component={ Book } />
+                  <Route path="/Services" component={ Services } />
+                  <Route path="/Delivery" component={ Delivery } />
                   <Footer/>
               </Router>
           </div>
