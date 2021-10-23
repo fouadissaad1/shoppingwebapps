@@ -2,7 +2,6 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import React from "react";
-import '../src/services/firestore';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import Home from "./components/pages/Home";
 import Header from "./components/pages/Header";
@@ -16,16 +15,17 @@ import Women from "./components/pages/Women";
 import Book from "./components/pages/Book";
 import Services from "./components/pages/Services";
 import Delivery from "./components/pages/Delivery";
-
+import "./services/firestore"
 function App() {
 
-  return (
+
+     return (
 
       <>
           <div className="App">
               <Router>
                   <Header/>
-                  <Route exact path="/" component={ Home } />
+                  <Route exact path="/" component={ Home }/>
                   <Route path="/Men" component={ Men } />
                   <Route path="/Women" component={ Women } />
                   <Route path="/Children" component={ Children } />
@@ -35,6 +35,7 @@ function App() {
                   <Route path="/Book" component={ Book } />
                   <Route path="/Services" component={ Services } />
                   <Route path="/Delivery" component={ Delivery } />
+
                   <Footer/>
               </Router>
           </div>

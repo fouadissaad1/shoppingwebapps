@@ -1,6 +1,6 @@
-import React from "react";
 import { MDBCol, MDBContainer, MDBFooter, MDBRow } from "mdbreact";
-
+import React from "react";
+import { Link } from "react-router-dom";
 function Footer() {
 
 
@@ -14,13 +14,13 @@ function Footer() {
                         <ul className="list-unstyled">
                             <li>
 
-                                <a href="/Book">Book an Appointement</a>
+                                <Link to="/Book">Book an Appointement</Link>
                             </li>
                             <li>
-                                <a href="/Services">Exclusive Online Services</a>
+                                <Link to="/Services">Exclusive Online Services</Link>
                             </li>
                             <li >
-                                <a href="/Delivery">Delivery</a>
+                                <Link to="/Delivery">Delivery</Link>
                             </li>
                         </ul>
                     </MDBCol>
@@ -28,19 +28,19 @@ function Footer() {
                         <h5 className="title">Links</h5>
                         <ul  className="list-unstyled">
                             <li >
-                                <a href="/Contact">Contact us</a>
+                                <Link to="/Contact">Contact us</Link>
                             </li>
                             <li>
-                                <a href="/About">About</a>
+                                <Link to="/About">About</Link>
                             </li>
                             <li>
-                                <a href="/Men">Men's Wear</a>
+                                <Link to="/Men">Men's Wear</Link>
                             </li>
                             <li >
-                                <a href="/Women">Women's Wear</a>
+                                <Link to="/Women">Women's Wear</Link>
                             </li>
                             <li >
-                                <a href="/Children">Children</a>
+                                <Link to="/Children">Children</Link>
                             </li>
                         </ul>
                     </MDBCol>

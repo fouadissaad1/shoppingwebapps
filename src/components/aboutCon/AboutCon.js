@@ -16,7 +16,7 @@ export function Teams(props) {
                 <td>{teams.name}</td>
                 <td>{teams.description} <br/>{teams.email}</td>
                 <th></th>
-                <td><img src={teams.image} width={500}/></td>
+                <td><img src={teams.image} width={500} alt="About"/></td>
             </tr>
         </MDBTableBody>
     </MDBTable>

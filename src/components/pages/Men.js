@@ -1,8 +1,7 @@
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
-import '../../services/firestore'
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { MEN_CLOTHING_DATA } from "../../data/data";
 import {
     MDBBtn,
@@ -14,7 +13,6 @@ import {
     MDBContainer,
     MDBRow
 } from "mdb-react-ui-kit";
-import firestore from "firebase/compat";
 
 
 function Category(props) {
@@ -52,15 +50,16 @@ function Man(props) {
 }
 export function Men(){
 
-    const [mensList, setmensList]=useState([]);
-    const [loading, setLoading]=useState(false);
-    const ref=firestore.firestore().collection("mens");
+   /* const [mensList, setmensList] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const ref = firestore.firestore().collection("mens");
     console.log(getMens)
-    function getMens(){
+
+    function getMens() {
         setLoading(true);
-        ref.onSnapshot((querySnapshot) =>{
-            const items=[];
-            querySnapshot.forEach((doc)=>{
+        ref.onSnapshot((querySnapshot) => {
+            const items = [];
+            querySnapshot.forEach((doc) => {
                 items.push(doc.data());
                 console.log(doc.data())
             });
@@ -68,13 +67,14 @@ export function Men(){
             setLoading(false);
         });
     }
-    useEffect(()=>{
+
+    useEffect(() => {
         getMens();
-    },[]);
-    if (loading){
+    }, []);
+    if (loading) {
         return <h1>loading...</h1>
-    }
-console.log(mensList)
+    }*/
+//console.log(mensList)
 
     return(
         <>
