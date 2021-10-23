@@ -1,3 +1,4 @@
+import '../pages/About.css'
 import { MDBTable, MDBTableBody, MDBTableHead } from "mdb-react-ui-kit";
 import React from "react";
 

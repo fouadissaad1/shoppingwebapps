@@ -1,4 +1,3 @@
-
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
@@ -22,11 +21,10 @@ function App() {
 
      return (
 
-      <>
-          <div className="App">
               <Router>
                   <Header/>
-                  <Route exact path="/" component={ Home }/>
+                  <switch>
+                  <Route  path="/" exact component={ Home }/>
                   <Route path="/Men" component={ Men } />
                   <Route path="/Women" component={ Women } />
                   <Route path="/Children" component={ Children } />
@@ -36,12 +34,10 @@ function App() {
                   <Route path="/Book" component={ Book } />
                   <Route path="/Services" component={ Services } />
                   <Route path="/Delivery" component={ Delivery } />
-
+                  </switch>
                   <Footer/>
               </Router>
-          </div>
 
-      </>
 
   );
 }

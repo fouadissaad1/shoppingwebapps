@@ -1,23 +1,19 @@
 import './Header.css';
-
-
 import { NavLink } from 'react-router-dom';
 import {  MDBIcon, MDBNavbarBrand, MDBNavbarToggler } from "mdb-react-ui-kit";
 import { MDBAnimation, MDBNavbar, MDBNavItem } from "mdbreact";
 import { useState } from "react";
-
 export function Header() {
     const [open, setOpen] = useState(true);
     return (
         <>
-
             <MDBNavbar className="navbar">
                 <MDBNavbarBrand className="brand-title">
                     <MDBAnimation type="bounce" infinite>
                         <strong className="white-text">Shopping</strong>
                     </MDBAnimation>
                 </MDBNavbarBrand >
-                <MDBNavbarToggler href="#" className="toggle-button" onClick={()=>setOpen(open)}>
+                <MDBNavbarToggler className="toggle-button" onClick={()=>setOpen(open)}>
                     <span className="bar"></span>
                     <span className="bar"></span>
                     <span className="bar"></span>

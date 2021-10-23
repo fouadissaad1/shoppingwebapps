@@ -60,7 +60,7 @@ function Mens(props) {
 export function Men(){
 
     const [mensFromDb, setMensFromDB] = useState([]);
-    const [loading, setLoading] = useState(false);
+
      async function LoadMens() {
          const mens = await getMensFromDb();
          console.log(mens);
@@ -70,9 +70,6 @@ export function Men(){
         LoadMens();
 
      },[])
-    if (loading) {
-        return <h1>loading...</h1>
-     }
 
 //    const [mensList, setmensList] = useState([]);
 //     const [loading, setLoading] = useState(false);

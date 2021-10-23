@@ -1,0 +1,23 @@
+.h1, h2, h3, h4, h5, h6{
+    color: white;
+
+
+}
+p{
+    color: white;
+}
+th{
+    color: wheat;
+}
+td{
+    color: white;
+}
+img{
+    width: 350px;
+}
+@media (max-width: 660px) {
+
+}
+@media (max-width: 990px) {
+
+}

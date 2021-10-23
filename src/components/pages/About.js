@@ -1,3 +1,4 @@
+import './About.css'
 import React, { useEffect, useState } from "react";
 import { MDBCol, MDBContainer, MDBRow } from "mdb-react-ui-kit";
 import { AboutCon, Teams } from "../aboutCon/AboutCon";
