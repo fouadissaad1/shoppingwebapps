@@ -1,21 +1,29 @@
+import './Header.css';
+
+
 import { NavLink } from 'react-router-dom';
-import { MDBCollapse, MDBContainer, MDBIcon, MDBNavbarBrand, MDBNavbarToggler } from "mdb-react-ui-kit";
-import { MDBAnimation, MDBNavbar, MDBNavItem } from "mdbreact";
+import { MDBCollapse, MDBIcon, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler } from "mdb-react-ui-kit";
+import { MDBAnimation, MDBHamburgerToggler, MDBNavbar, MDBNavItem } from "mdbreact";
 import { useState } from "react";
 
-export function Header (){
+export function Header() {
     const [open, setOpen] = useState(true);
     return (
         <>
-            <MDBContainer fluid>
-                <MDBNavbar  color="default-color" dark expand="md">
-                    <MDBNavbarBrand>
-                        <MDBAnimation type="bounce" infinite>
-                            <strong className="white-text">Shopping</strong>
-                        </MDBAnimation>
-                    </MDBNavbarBrand >
-                    <MDBNavbarToggler onClick={() => setOpen(!open)}/>
-                    <MDBCollapse in={open} navbar={MDBNavbar}>
+
+            <MDBNavbar className="navbar">
+                <MDBNavbarBrand className="brand-title">
+                    <MDBAnimation type="bounce" infinite>
+                        <strong className="white-text">Shopping</strong>
+                    </MDBAnimation>
+                </MDBNavbarBrand >
+                <MDBNavbarToggler href="#" className="toggle-button" onClick={()=>setOpen(open)}>
+                    <span className="bar"></span>
+                    <span className="bar"></span>
+                    <span className="bar"></span>
+                </MDBNavbarToggler>
+                <div  className="navbar-links">
+                    <ul>
                         <MDBNavItem className="navbar-item">
                             <NavLink to="/" className="nav-link" aria-current="page">Home</NavLink>
                         </MDBNavItem>
@@ -39,9 +47,11 @@ export function Header (){
                                 <MDBIcon icon="user">Login</MDBIcon>
                             </NavLink>
                         </MDBNavItem>
-                    </MDBCollapse>
-                </MDBNavbar>
-            </MDBContainer>
+                    </ul>
+                </div>
+
+            </MDBNavbar>
+
 
         </>
     );

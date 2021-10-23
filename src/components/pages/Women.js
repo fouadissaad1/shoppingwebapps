@@ -1,5 +1,5 @@
 import React from "react";
-import { WOMEN_CLOTHING_DATA } from "../../data/data";
+
 import {
     MDBBtn,
     MDBCard, MDBCardBody, MDBCardText, MDBCardTitle,
@@ -7,6 +7,7 @@ import {
     MDBContainer,
     MDBRow
 } from "mdb-react-ui-kit";
+import { WOMEN_CLOTHING_DATA } from "../../data/data";
 
 function Category(props) {
     const {category} = props;

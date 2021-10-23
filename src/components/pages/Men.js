@@ -38,8 +38,8 @@ function Mens(props) {
             <MDBRow>
                 <MDBCol>
                     <MDBCard style={{maxWidth: '22rem'}}>
-                        {mens.image}
-                        <MDBCardBody>
+                        <img src={mens.image} width={300} alt="About"/>
+                          <MDBCardBody>
                             <MDBCardTitle>{mens.name}</MDBCardTitle>
                             <MDBCardText>
                                 <p className="pMenStyle">size: {mens.size} </p>

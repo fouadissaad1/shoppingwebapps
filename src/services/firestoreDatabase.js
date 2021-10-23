@@ -15,3 +15,18 @@ export async function getMensFromDb() {
     if (result.empty) return [];
     return result.docs.map(doc => ({...doc.data(), id: doc.id}));
 }
+const COLLECTION_WOMEN = "womens";
+export async function getWomenFromDb() {
+    if (!firestoreDatabase) return [];
+    const result = await firestoreDatabase.collection(COLLECTION_WOMEN).get();
+    if (result.empty) return [];
+    return result.docs.map(doc => ({...doc.data(), id: doc.id}));
+}
+
+const COLLECTION_KIDS = "kids";
+export async function getKidFromDb() {
+    if (!firestoreDatabase) return [];
+    const result = await firestoreDatabase.collection(COLLECTION_KIDS).get();
+    if (result.empty) return [];
+    return result.docs.map(doc => ({...doc.data(), id: doc.id}));
+}
