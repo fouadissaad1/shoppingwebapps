@@ -2,8 +2,8 @@ import './Header.css';
 
 
 import { NavLink } from 'react-router-dom';
-import { MDBCollapse, MDBIcon, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler } from "mdb-react-ui-kit";
-import { MDBAnimation, MDBHamburgerToggler, MDBNavbar, MDBNavItem } from "mdbreact";
+import {  MDBIcon, MDBNavbarBrand, MDBNavbarToggler } from "mdb-react-ui-kit";
+import { MDBAnimation, MDBNavbar, MDBNavItem } from "mdbreact";
 import { useState } from "react";
 
 export function Header() {

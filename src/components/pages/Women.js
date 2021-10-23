@@ -30,9 +30,13 @@ function Women(props) {
                         <MDBCardBody>
                             <MDBCardTitle>{women.name}</MDBCardTitle>
                             <MDBCardText>
-                                <p className="pMenStyle">size: {women.size} </p>
-                                <p className="pMenStyle">color: {women.color}</p>
-                                <p className="pMenStyle">how much: {women.prijs}&euro;</p>
+                                size: {women.size}
+                            </MDBCardText>
+                                <MDBCardText>
+                                color: {women.color}
+                                </MDBCardText>
+                                    <MDBCardText>
+                              how much: {women.prijs}&euro;
                             </MDBCardText>
                             <MDBBtn href='#'>Ordre</MDBBtn>
                         </MDBCardBody>

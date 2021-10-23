@@ -1,3 +1,4 @@
+import './footer.css'
 import { MDBCol, MDBContainer, MDBFooter, MDBRow } from "mdbreact";
 import React from "react";
 import { Link } from "react-router-dom";
@@ -6,11 +7,11 @@ function Footer() {
 
     return (
 
-        <MDBFooter color="blue" className="font-small pt-6 mt-4">
-            <MDBContainer fluid className="text-center text-md-left">
+        <MDBFooter  className="footer">
+            <MDBContainer fluid>
                 <MDBRow>
-                    <MDBCol md="6">
-                        <h5 className="text-uppercase mb-4 mt-3 font-weight-bold">Exclusive Services</h5>
+                    <MDBCol md="4">
+                        <h5>Exclusive Services</h5>
                         <ul className="list-unstyled">
                             <li>
 
@@ -24,7 +25,7 @@ function Footer() {
                             </li>
                         </ul>
                     </MDBCol>
-                    <MDBCol md="6">
+                    <MDBCol md="4">
                         <h5 className="title">Links</h5>
                         <ul  className="list-unstyled">
                             <li >
@@ -33,6 +34,12 @@ function Footer() {
                             <li>
                                 <Link to="/About">About</Link>
                             </li>
+
+                        </ul>
+                    </MDBCol>
+                    <MDBCol md="4">
+                        <h5 className="title">Links</h5>
+                        <ul  className="list-unstyled">
                             <li>
                                 <Link to="/Men">Men's Wear</Link>
                             </li>

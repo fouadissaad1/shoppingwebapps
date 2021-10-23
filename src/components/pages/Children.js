@@ -44,8 +44,10 @@ function Kid(props) {
                     <MDBCardBody>
                         <MDBCardTitle>{kid.name}</MDBCardTitle>
                         <MDBCardText>
-                            <p className="pMenStyle">color: {kid.color}</p>
-                            <p className="pMenStyle">how much: {kid.price}&euro;</p>
+                           color: {kid.color}
+                        </MDBCardText>
+                            <MDBCardText>
+                          how much: {kid.price}&euro;
                         </MDBCardText>
                         <MDBBtn href='#'>Ordre</MDBBtn>
                     </MDBCardBody>
@@ -69,7 +71,6 @@ export function Children(){
                             </MDBCol>
                         )
                     }
-
                 </MDBRow>
             </MDBContainer>
         </>

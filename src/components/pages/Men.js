@@ -2,7 +2,6 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import React, { useEffect, useState } from "react";
-//import { MEN_CLOTHING_DATA } from "../../data/data";
 import {
     MDBBtn,
     MDBCard,
@@ -14,7 +13,6 @@ import {
     MDBRow
 } from "mdb-react-ui-kit";
 import { getMensFromDb } from "../../services/firestoreDatabase";
-
 // function Category(props) {
 //     const {category} = props;
 //     return <MDBRow>
@@ -42,9 +40,13 @@ function Mens(props) {
                           <MDBCardBody>
                             <MDBCardTitle>{mens.name}</MDBCardTitle>
                             <MDBCardText>
-                                <p className="pMenStyle">size: {mens.size} </p>
-                                <p className="pMenStyle">color: {mens.color}</p>
-                                <p className="pMenStyle">how much: {mens.prijs}&euro;</p>
+                                size: {mens.size}
+                            </MDBCardText>
+                              <MDBCardText>
+                               color: {mens.color}
+                              </MDBCardText>
+                              <MDBCardText>
+                                how much: {mens.prijs}&euro;
                             </MDBCardText>
                             <MDBBtn href='#'>Ordre</MDBBtn>
                         </MDBCardBody>
@@ -54,10 +56,11 @@ function Mens(props) {
         </MDBContainer>
     );
 }
+
 export function Men(){
 
-     const [mensFromDb, setMensFromDB] = useState([]);
-
+    const [mensFromDb, setMensFromDB] = useState([]);
+    const [loading, setLoading] = useState(false);
      async function LoadMens() {
          const mens = await getMensFromDb();
          console.log(mens);
@@ -67,6 +70,9 @@ export function Men(){
         LoadMens();
 
      },[])
+    if (loading) {
+        return <h1>loading...</h1>
+     }
 
 //    const [mensList, setmensList] = useState([]);
 //     const [loading, setLoading] = useState(false);

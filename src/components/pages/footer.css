@@ -1,0 +1,17 @@
+.footer{
+    font-family: cursive;
+    position: fixed;
+    background-color: gray;
+    left: 0%;
+    bottom: 0%;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+@media (max-width: 660px) {
+
+    .footer {
+
+    }
+}
