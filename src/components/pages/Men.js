@@ -1,8 +1,8 @@
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
-import React from "react";
-import { MEN_CLOTHING_DATA } from "../../data/data";
+import React, { useEffect, useState } from "react";
+//import { MEN_CLOTHING_DATA } from "../../data/data";
 import {
     MDBBtn,
     MDBCard,
@@ -13,32 +13,38 @@ import {
     MDBContainer,
     MDBRow
 } from "mdb-react-ui-kit";
+import { getMensFromDb } from "../../services/firestoreDatabase";
 
+// function Category(props) {
+//     const {category} = props;
+//     return <MDBRow>
+//         <MDBCol>
+//             <h3 className="title">{category.name}</h3>
+//         </MDBCol>
+//         <MDBCol>
+//             {
+//
+//                 category.products.map((p) => <Mens key={p.id} men={p}/>)
+//
+//             }
+//         </MDBCol>
+//     </MDBRow>
+// }
 
-function Category(props) {
-    const {category} = props;
-    return <div>
-        <h3 className="title">{category.name}</h3>
-        {
-            category.products.map((p) => <Man key={p.id} man={p}/>)
-        }
-    </div>
-}
-
-function Man(props) {
-    const {man} = props;
+function Mens(props) {
+    const {mens} = props;
     return (
         <MDBContainer>
             <MDBRow>
                 <MDBCol>
                     <MDBCard style={{maxWidth: '22rem'}}>
-                        {man.image}
+                        {mens.image}
                         <MDBCardBody>
-                            <MDBCardTitle>{man.name}</MDBCardTitle>
+                            <MDBCardTitle>{mens.name}</MDBCardTitle>
                             <MDBCardText>
-                                <p className="pMenStyle">size: {man.size} </p>
-                                <p className="pMenStyle">color: {man.color}</p>
-                                <p className="pMenStyle">how much: {man.prijs}&euro;</p>
+                                <p className="pMenStyle">size: {mens.size} </p>
+                                <p className="pMenStyle">color: {mens.color}</p>
+                                <p className="pMenStyle">how much: {mens.prijs}&euro;</p>
                             </MDBCardText>
                             <MDBBtn href='#'>Ordre</MDBBtn>
                         </MDBCardBody>
@@ -50,31 +56,43 @@ function Man(props) {
 }
 export function Men(){
 
-   /* const [mensList, setmensList] = useState([]);
-    const [loading, setLoading] = useState(false);
-    const ref = firestore.firestore().collection("mens");
-    console.log(getMens)
+     const [mensFromDb, setMensFromDB] = useState([]);
 
-    function getMens() {
-        setLoading(true);
-        ref.onSnapshot((querySnapshot) => {
-            const items = [];
-            querySnapshot.forEach((doc) => {
-                items.push(doc.data());
-                console.log(doc.data())
-            });
-            setmensList(items);
-            setLoading(false);
-        });
-    }
+     async function LoadMens() {
+         const mens = await getMensFromDb();
+         console.log(mens);
+         setMensFromDB(mens);
+     }
+     useEffect(()=>{
+        LoadMens();
 
-    useEffect(() => {
-        getMens();
-    }, []);
-    if (loading) {
-        return <h1>loading...</h1>
-    }*/
-//console.log(mensList)
+     },[])
+
+//    const [mensList, setmensList] = useState([]);
+//     const [loading, setLoading] = useState(false);
+//     const ref = firestore.firestore().collection("mens");
+//     console.log(getMens)
+//
+//     function getMens() {
+//         setLoading(true);
+//         ref.onSnapshot((querySnapshot) => {
+//             const items = [];
+//             querySnapshot.forEach((doc) => {
+//                 items.push(doc.data());
+//                 console.log(doc.data())
+//             });
+//             setmensList(items);
+//             setLoading(false);
+//         });
+//     }
+//
+//     useEffect(() => {
+//         getMens();
+//     }, []);
+//     if (loading) {
+//         return <h1>loading...</h1>
+//     }
+// console.log(mensList)
 
     return(
         <>
@@ -84,9 +102,9 @@ export function Men(){
                     <hr/>
                 </MDBRow>
                 <MDBRow>
-                    {MEN_CLOTHING_DATA.map((c, i) =>
+                    {mensFromDb.map((c, i) =>
                         <MDBCol>
-                            <Category category={c} key={i}/>
+                            <Mens mens={c} key={i}/>
                         </MDBCol>
                     )}
 
