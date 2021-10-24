@@ -4,54 +4,75 @@ import { Business, Consumer, ContactInformation, Payments, ServiceWarranty } fro
 
 
 export function Contact(){
-    const [showShow, setShowShow] = useState(false);
-    const toggleShow = () => setShowShow(!showShow);
+    const [showBusiness, setusiness] = useState(false);
+    const [showShowInformation, setshowShowInformation] = useState(false);
+    const [showConsumer, setShowConsumer] = useState(false);
+    const [showServices, setShowServices] = useState(false);
+    const [showPayments, setShowPayments] = useState(false);
+
+    const toggleBusiness = () => setusiness(!showBusiness);
+    const togglesInformation = () => setshowShowInformation(!showShowInformation);
+    const togglesConsumer = () => setShowConsumer(!showConsumer);
+    const togglesServices = () => setShowServices(!showServices);
+    const togglesPayments = () => setShowPayments(!showPayments);
+
     return(
         <>
             <React.Fragment>
-                {/* eslint-disable-next-line react/jsx-no-undef */}
-                <MDBRow/>
-                <MDBRow color={"red"}>
-                    {/* eslint-disable-next-line react/jsx-no-undef */}
-                    <MDBCol lg={1}/>
-                    <MDBCol lg={2}>
-
-                        {/* eslint-disable-next-line react/jsx-no-undef,no-undef */}
-                        <MDBBtn onClick={toggleShow}>Contact information</MDBBtn>
-                        {/* eslint-disable-next-line react/jsx-no-undef */}
-                        <MDBCollapse show={showShow}>
+                <br/> <br/>
+                <MDBRow>
+                    <MDBCol size="4"></MDBCol>
+                    <MDBCol size="2">
+                        <MDBBtn onClick={togglesInformation}>Contact information</MDBBtn>
+                    </MDBCol>
+                    <MDBCol size="4">
+                        <MDBCollapse show={showShowInformation}>
                             <ContactInformation/>
                         </MDBCollapse>
                     </MDBCol>
-                    <MDBCol lg={2}>
-                        <MDBBtn onClick={toggleShow}>Consumer</MDBBtn>
-                        <MDBCollapse show={showShow}>
+                </MDBRow>
+                <MDBRow>
+                    <MDBCol size="4"></MDBCol>
+                    <MDBCol size="4">
+                        <MDBBtn onClick={togglesConsumer}>Consumer</MDBBtn>
+                        <MDBCollapse show={showConsumer}>
                             <Consumer/>
                         </MDBCollapse>
                     </MDBCol>
-                    <MDBCol>
-                        <MDBBtn onClick={toggleShow}>Service and warranty</MDBBtn>
-                        <MDBCollapse show={showShow}>
+                    <MDBCol size="4">
+
+                    </MDBCol>
+                </MDBRow>
+                <MDBRow>
+                    <MDBCol size="4"></MDBCol>
+                    <MDBCol size="4">
+                        <MDBBtn onClick={togglesServices}>Service and warranty</MDBBtn>
+                        <MDBCollapse show={showServices}>
                             <ServiceWarranty/>
                         </MDBCollapse>
                     </MDBCol>
-                    <MDBCol lg={2}>
-                        <MDBBtn onClick={toggleShow}>Payments and administrative</MDBBtn>
-                        <MDBCollapse show={showShow}>
+                    <MDBCol size="4"></MDBCol>
+                </MDBRow>
+                <MDBRow>
+                    <MDBCol size="4"></MDBCol>
+                    <MDBCol size="4">
+                        <MDBBtn onClick={togglesPayments}>Payments and administrative</MDBBtn>
+                        <MDBCollapse show={showPayments}>
                             <Payments/>
                         </MDBCollapse>
                     </MDBCol>
-                    <MDBCol lg={2}>
-                        <MDBBtn onClick={toggleShow}>For Business</MDBBtn>
-                        <MDBCollapse show={showShow}>
+                    <MDBCol size="4"></MDBCol>
+                </MDBRow>
+                <MDBRow>
+                    <MDBCol size="4"></MDBCol>
+                    <MDBCol size="4">
+                        <MDBBtn onClick={toggleBusiness}>For Business</MDBBtn>
+                        <MDBCollapse show={showBusiness}>
                             <Business/>
                         </MDBCollapse>
-
                     </MDBCol>
-                    <MDBCol lg={1}/>
+                    <MDBCol size="4"></MDBCol>
                 </MDBRow>
-                <MDBRow/>
-
             </React.Fragment>
         </>
     )
