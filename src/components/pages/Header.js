@@ -24,13 +24,13 @@ export function Header() {
                             <NavLink to="/" className="nav-link" aria-current="page">Home</NavLink>
                         </MDBNavItem>
                         <MDBNavItem className="navbar-item">
-                            <NavLink to="/Men" className="nav-link">MEN'S WEAR</NavLink>
+                            <NavLink to="/Men" className="nav-link">Men</NavLink>
                         </MDBNavItem>
                         <MDBNavItem className="navbar-item">
-                            <NavLink to="/Women" className="nav-link">WOMEN'S WEAR</NavLink>
+                            <NavLink to="/Women" className="nav-link">Women</NavLink>
                         </MDBNavItem>
                         <MDBNavItem className="navbar-item">
-                            <NavLink to="/Children" className="nav-link">CHILDREN</NavLink>
+                            <NavLink to="/Children" className="nav-link">Childeren</NavLink>
                         </MDBNavItem>
                         <MDBNavItem className="navbar-item">
                             <NavLink to="/About" className="nav-link">About</NavLink>

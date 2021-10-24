@@ -1,5 +1,5 @@
 import React from "react";
-import {  MDBContainer, MDBRow } from "mdb-react-ui-kit";
+import { MDBCol, MDBContainer, MDBRow } from "mdb-react-ui-kit";
 
 
 export function Login(){
@@ -8,18 +8,34 @@ export function Login(){
         <>
             <MDBContainer fluid>
                 <MDBRow>
-                    <h2>Login</h2>
-                    <form>
-                        <label htmlFor="email">Email</label>
-                        <input type="email" name="email" placeholder="Email"/>
-                        <label htmlFor="password">Password</label>
-                        <input type="password" name="password" placeholder="Password"/>
-                        <button type="submit">Submit</button>
-                    </form>
+                    <MDBCol size="1"></MDBCol>
+                    <MDBCol size="4">
+                        <br/>
+                        <h2>Login</h2>
+                    </MDBCol>
+                    <MDBCol size="4">
+                        <br/>
+                        <h2>Hello, Friend</h2>
+                    </MDBCol>
                 </MDBRow>
                 <MDBRow>
-
+                    <MDBCol size="1"></MDBCol>
+                    <MDBCol size="4">
+                        <br/><br/>
+                        <form>
+                            <input type="email" name="email" placeholder="Email"/><br/> <br/>
+                            <input type="password" name="password" placeholder="Password"/><br/><br/>
+                            <button type="submit">Login</button>
+                        </form>
+                    </MDBCol>
+                    <MDBCol size="4">
+                        <br/><br/>
+                        <p>Enter your Personal Details and Start with Shopping</p> <br/>
+                        <button type="submit">Sing up</button>
+                    </MDBCol>
                 </MDBRow>
+
+
             </MDBContainer>
         </>
     )

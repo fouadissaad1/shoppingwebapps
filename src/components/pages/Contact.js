@@ -29,9 +29,7 @@ export function Contact(){
                             <ContactInformation/>
                         </MDBCollapse>
                     </MDBCol>
-                    <MDBCol size="4">
-
-                    </MDBCol>
+                    <MDBCol size="4"/>
                 </MDBRow>
                 <MDBRow>
                     <MDBCol size="4"></MDBCol>
