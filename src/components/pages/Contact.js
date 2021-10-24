@@ -1,3 +1,4 @@
+import './Contact.css'
 import { MDBBtn, MDBCol, MDBCollapse, MDBRow } from "mdb-react-ui-kit";
 import React, { useState } from "react";
 import { Business, Consumer, ContactInformation, Payments, ServiceWarranty } from "../contactInformation/ContactInformation";
@@ -19,16 +20,17 @@ export function Contact(){
     return(
         <>
             <React.Fragment>
-                <br/> <br/>
+                <br/>
                 <MDBRow>
                     <MDBCol size="4"></MDBCol>
-                    <MDBCol size="2">
-                        <MDBBtn onClick={togglesInformation}>Contact information</MDBBtn>
-                    </MDBCol>
                     <MDBCol size="4">
+                        <MDBBtn onClick={togglesInformation}>Contact information</MDBBtn>
                         <MDBCollapse show={showShowInformation}>
                             <ContactInformation/>
                         </MDBCollapse>
+                    </MDBCol>
+                    <MDBCol size="4">
+
                     </MDBCol>
                 </MDBRow>
                 <MDBRow>
