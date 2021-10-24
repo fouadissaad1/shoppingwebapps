@@ -1,4 +1,4 @@
-export function Delivery(){
+export function Delivery() {
     return (
         <div>
             <h3>Delivery</h3>

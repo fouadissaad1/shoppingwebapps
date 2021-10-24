@@ -4,11 +4,7 @@ import { MDBCol, MDBContainer, MDBRow } from "mdb-react-ui-kit";
 import { AboutCon, Teams } from "../aboutCon/AboutCon";
 import { getTeamsFromDb } from "../../services/firestoreDatabase";
 
-
-
-
-export function About(){
-
+export function About() {
     const [teamsFromDb, setTeamsFromDB] = useState([]);
 
     async function LoadTeams() {
@@ -17,11 +13,11 @@ export function About(){
         setTeamsFromDB(teams);
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         LoadTeams();
 
-    },[])
-    return(
+    }, [])
+    return (
         <>
             <MDBContainer>
                 <MDBRow>

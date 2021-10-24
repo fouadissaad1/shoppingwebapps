@@ -30,8 +30,6 @@ a {
     background-color: gray;
     color: teal;
     font-size: 20px;
-
-
 }
 
 .navbar-links ul {
@@ -60,6 +58,7 @@ a {
 .navbar-links li:hover {
     background-color: navajowhite;
 }
+
 .toggle-button {
     position: absolute;
     top: .75rem;
@@ -83,9 +82,7 @@ a {
 @media (max-width: 660px) {
 
     .brand-title {
-
         font-size: 1rem;
-
     }
 
     .toggle-button {
@@ -95,7 +92,6 @@ a {
     .navbar-links {
         display: none;
         width: 100%;
-
     }
 
     .navbar {

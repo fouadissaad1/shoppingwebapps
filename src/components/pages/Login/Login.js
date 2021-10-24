@@ -1,44 +1,33 @@
-import React from "react";
+import "./Login.css"
 import { MDBCol, MDBContainer, MDBRow } from "mdb-react-ui-kit";
 
+function Login() {
 
-export function Login(){
+    return (<MDBContainer>
+            <br/><br/>
+            <MDBRow>
+                <MDBCol size={4}>
 
-    return(
-        <>
-            <MDBContainer fluid>
-                <MDBRow>
-                    <MDBCol size="1"></MDBCol>
-                    <MDBCol size="4">
-                        <br/>
-                        <h2>Login</h2>
-                    </MDBCol>
-                    <MDBCol size="4">
-                        <br/>
-                        <h2>Hello, Friend</h2>
-                    </MDBCol>
-                </MDBRow>
-                <MDBRow>
-                    <MDBCol size="1"></MDBCol>
-                    <MDBCol size="4">
-                        <br/><br/>
-                        <form>
-                            <input type="email" name="email" placeholder="Email"/><br/> <br/>
-                            <input type="password" name="password" placeholder="Password"/><br/><br/>
-                            <button type="submit">Login</button>
-                        </form>
-                    </MDBCol>
-                    <MDBCol size="4">
-                        <br/><br/>
-                        <p>Enter your Personal Details and Start with Shopping</p> <br/>
-                        <button type="submit">Sing up</button>
-                    </MDBCol>
-                </MDBRow>
+                </MDBCol>
+                <MDBCol size={4}>
+                    <h1>Login</h1>
+                    <br/>
+                    <form>
+                        <label className={"label"}>Username
+                            <input type="text" name="username" placeholder="username"/>
+                        </label><br/>
+                        <label>Password
+                            <input type="password" name="password" placeholder="password"/>
+                        </label><br/>
+                        <button type="submit">Login</button>
+                    </form>
+                </MDBCol>
+                <MDBCol size={4}></MDBCol>
+            </MDBRow>
+            <MDBRow/>
+        </MDBContainer>
 
-
-            </MDBContainer>
-        </>
     )
 }
-export default Login;
 
+export default Login

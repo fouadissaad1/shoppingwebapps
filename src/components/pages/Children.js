@@ -11,7 +11,6 @@ import {
 } from "mdb-react-ui-kit";
 import { getChilderenFromDb } from "../../services/firestoreDatabase";
 //import { Kids_data } from "../../data/data";
-
 // function Category(props) {
 //     const {category} = props;
 //     const [show, setShow] = useState(!false);
@@ -56,16 +55,20 @@ function Childs(props) {
         </MDBRow>
     </MDBContainer>
 }
-export function Children(){
-    const[childerenFromDb,setChilderenFromDb]=useState([])
-    async  function LoadChilderen(){
-        const  childeren=await getChilderenFromDb();
+
+export function Children() {
+    const [childerenFromDb, setChilderenFromDb] = useState([])
+
+    async function LoadChilderen() {
+        const childeren = await getChilderenFromDb();
         console.log(childeren);
         setChilderenFromDb(childeren);
     }
-    useEffect(()=>{LoadChilderen();
-    },[])
-    return(
+
+    useEffect(() => {
+        LoadChilderen();
+    }, [])
+    return (
         <>
             <MDBContainer fluid>
                 <MDBRow>
@@ -81,14 +84,15 @@ export function Children(){
                     }*/}
 
                     {
-                        childerenFromDb.map((c,i)=>
-                        <MDBCol>
-                            <Childs childs={c} key={i}/>
-                        </MDBCol>)
+                        childerenFromDb.map((c, i) =>
+                            <MDBCol>
+                                <Childs childs={c} key={i}/>
+                            </MDBCol>)
                     }
                 </MDBRow>
             </MDBContainer>
         </>
     )
 }
+
 export default Children;

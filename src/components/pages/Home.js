@@ -9,6 +9,7 @@ function Home() {
     return (
         <>
             <MDBContainer fluid className="purple-gradient color-block-5 mb-3 mx-auto rounded-circle z-depth-1">
+                <br/> <br/>
                 <MDBRow>
                     <MDBCol lg="3">
                         <h1 className="red-text flex-center">COATS FOR</h1>

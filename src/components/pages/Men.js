@@ -14,7 +14,7 @@ import {
 } from "mdb-react-ui-kit";
 import { getMensFromDb } from "../../services/firestoreDatabase";
 
- // function Category(props) {
+// function Category(props) {
  //     const {category} = props;
  //
  //    return <MDBRow>

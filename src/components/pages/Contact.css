@@ -1,14 +1,17 @@
-.col-4{
+.col-4 {
     margin: 2px;
     text-align: center;
 }
-.col-4 a{
+
+.col-4 a {
     font-size: 80px;
     font-family: cursive;
     align-items: center;
 }
 
-.col-4 {width: 33.33%;}
+.col-4 {
+    width: 33.33%;
+}
 
 @media (max-width: 660px) {
     div.col-4 {
@@ -16,7 +19,8 @@
         font-family: cursive;
         align-items: center;
     }
-    .col-4{
+
+    .col-4 {
         text-align: center;
     }
 }
