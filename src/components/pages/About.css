@@ -1,7 +1,5 @@
-.h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6{
     color: white;
-
-
 }
 p{
     color: white;
@@ -16,8 +14,11 @@ img{
     width: 350px;
 }
 @media (max-width: 660px) {
-
-}
-@media (max-width: 990px) {
+    img{
+        width: 250px;
+    }
+    p{
+        font-size: small;
+    }
 
 }
