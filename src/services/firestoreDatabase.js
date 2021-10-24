@@ -23,8 +23,8 @@ export async function getWomenFromDb() {
     return result.docs.map(doc => ({...doc.data(), id: doc.id}));
 }
 
-const COLLECTION_KIDS = "kids";
-export async function getKidFromDb() {
+const COLLECTION_KIDS = "childeren";
+export async function getChilderenFromDb() {
     if (!firestoreDatabase) return [];
     const result = await firestoreDatabase.collection(COLLECTION_KIDS).get();
     if (result.empty) return [];

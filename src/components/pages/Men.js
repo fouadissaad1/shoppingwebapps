@@ -13,21 +13,23 @@ import {
     MDBRow
 } from "mdb-react-ui-kit";
 import { getMensFromDb } from "../../services/firestoreDatabase";
-// function Category(props) {
-//     const {category} = props;
-//     return <MDBRow>
-//         <MDBCol>
-//             <h3 className="title">{category.name}</h3>
-//         </MDBCol>
-//         <MDBCol>
-//             {
-//
-//                 category.products.map((p) => <Mens key={p.id} men={p}/>)
-//
-//             }
-//         </MDBCol>
-//     </MDBRow>
-// }
+
+ // function Category(props) {
+ //     const {category} = props;
+ //
+ //    return <MDBRow>
+ //         <MDBCol>
+ //             <h3 className="title">{category.name}</h3>
+ //         </MDBCol>
+ //         <MDBCol>
+ //             {
+ //
+ //                category.products.map((p) => <Mens key={p.id} men={p}/>)
+ //
+ //             }
+ //         </MDBCol>
+ //     </MDBRow>
+ // }
 
 function Mens(props) {
     const {mens} = props;
@@ -58,9 +60,7 @@ function Mens(props) {
 }
 
 export function Men(){
-
     const [mensFromDb, setMensFromDB] = useState([]);
-
      async function LoadMens() {
          const mens = await getMensFromDb();
          console.log(mens);
@@ -70,33 +70,6 @@ export function Men(){
         LoadMens();
 
      },[])
-
-//    const [mensList, setmensList] = useState([]);
-//     const [loading, setLoading] = useState(false);
-//     const ref = firestore.firestore().collection("mens");
-//     console.log(getMens)
-//
-//     function getMens() {
-//         setLoading(true);
-//         ref.onSnapshot((querySnapshot) => {
-//             const items = [];
-//             querySnapshot.forEach((doc) => {
-//                 items.push(doc.data());
-//                 console.log(doc.data())
-//             });
-//             setmensList(items);
-//             setLoading(false);
-//         });
-//     }
-//
-//     useEffect(() => {
-//         getMens();
-//     }, []);
-//     if (loading) {
-//         return <h1>loading...</h1>
-//     }
-// console.log(mensList)
-
     return(
         <>
             <MDBContainer fluid>
@@ -110,9 +83,7 @@ export function Men(){
                             <Mens mens={c} key={i}/>
                         </MDBCol>
                     )}
-
                 </MDBRow>
-
             </MDBContainer>
         </>
     )
