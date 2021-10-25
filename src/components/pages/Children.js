@@ -41,7 +41,7 @@ function Childs(props) {
                 <MDBCard style={{maxWidth: '22rem'}}>
                     <img src={childs.image} width={300} alt="childeren"/>
                     <MDBCardBody>
-                        <MDBCardTitle>{childs.name}</MDBCardTitle>
+                        <MDBCardTitle class="red-text">{childs.name}</MDBCardTitle>
                         <MDBCardText>
                             color: {childs.color}
                         </MDBCardText>
