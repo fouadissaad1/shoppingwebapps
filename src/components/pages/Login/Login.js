@@ -4,8 +4,6 @@ import { NavLink } from "react-router-dom";
 
 
 function Login() {
-
-
     return (<MDBContainer>
             <br/><br/>
             <MDBRow>
@@ -31,7 +29,6 @@ function Login() {
             </MDBRow>
             <MDBRow/>
         </MDBContainer>
-
     )
 }
 
