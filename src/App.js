@@ -16,6 +16,7 @@ import Book from "./components/pages/Book";
 import Services from "./components/pages/Services";
 import Delivery from "./components/pages/Delivery";
 import "./services/firestore";
+import Register from "./components/pages/signup/Register";
 
 function App() {
     return (
@@ -33,6 +34,7 @@ function App() {
                 <Route path="/Book" component={Book}/>
                 <Route path="/Services" component={Services}/>
                 <Route path="/Delivery" component={Delivery}/>
+                <Route path="/Register" component={Register}/>
             </switch>
             <Footer/>
         </Router>

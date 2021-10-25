@@ -1,7 +1,10 @@
-import "./Login.css"
+import "./Login.css";
 import { MDBCol, MDBContainer, MDBRow } from "mdb-react-ui-kit";
+import { NavLink } from "react-router-dom";
+
 
 function Login() {
+
 
     return (<MDBContainer>
             <br/><br/>
@@ -21,6 +24,8 @@ function Login() {
                         </label><br/>
                         <button type="submit">Login</button>
                     </form>
+                    <br/>
+                    <NavLink to="/Register" className="nav-link" aria-current="page">Register</NavLink>
                 </MDBCol>
                 <MDBCol size={4}></MDBCol>
             </MDBRow>
