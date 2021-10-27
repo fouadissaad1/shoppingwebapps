@@ -1,11 +1,11 @@
 import "firebase/firestore";
-import { firestoreDatabase } from "./firestore";
+import { firebaseConfig } from "./firestore";
 
 const COLLECTION_TEAMS = "teams";
 
 export async function getTeamsFromDb() {
-    if (!firestoreDatabase) return [];
-    const result = await firestoreDatabase.collection(COLLECTION_TEAMS).get();
+    if (!firebaseConfig) return [];
+    const result = await firebaseConfig.firestore().collection(COLLECTION_TEAMS).get();
     if (result.empty) return [];
     return result.docs.map(doc => ({...doc.data(), id: doc.id}));
 }
@@ -13,8 +13,8 @@ export async function getTeamsFromDb() {
 const COLLECTION_MENS = "mens";
 
 export async function getMensFromDb() {
-    if (!firestoreDatabase) return [];
-    const result = await firestoreDatabase.collection(COLLECTION_MENS).get();
+    if (!firebaseConfig) return [];
+    const result = await firebaseConfig.firestore().collection(COLLECTION_MENS).get();
     if (result.empty) return [];
     return result.docs.map(doc => ({...doc.data(), id: doc.id}));
 }
@@ -22,8 +22,8 @@ export async function getMensFromDb() {
 const COLLECTION_WOMEN = "women's";
 
 export async function getWomenFromDb() {
-    if (!firestoreDatabase) return [];
-    const result = await firestoreDatabase.collection(COLLECTION_WOMEN).get();
+    if (!firebaseConfig) return [];
+    const result = await firebaseConfig.firestore().collection(COLLECTION_WOMEN).get();
     if (result.empty) return [];
     return result.docs.map(doc => ({...doc.data(), id: doc.id}));
 }
@@ -31,8 +31,8 @@ export async function getWomenFromDb() {
 const COLLECTION_KIDS = "childeren";
 
 export async function getChilderenFromDb() {
-    if (!firestoreDatabase) return [];
-    const result = await firestoreDatabase.collection(COLLECTION_KIDS).get();
+    if (!firebaseConfig) return [];
+    const result = await firebaseConfig.firestore().collection(COLLECTION_KIDS).get();
     if (result.empty) return [];
     return result.docs.map(doc => ({...doc.data(), id: doc.id}));
 }

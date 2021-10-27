@@ -4,6 +4,9 @@ import { NavLink } from "react-router-dom";
 
 
 function Login() {
+
+
+
     return (<MDBContainer>
             <br/><br/>
             <MDBRow>
@@ -15,7 +18,7 @@ function Login() {
                     <br/>
                     <form>
                         <label className={"label"}>Username
-                            <input type="text" name="username" placeholder="username"/>
+                            <input type="email" name="email" placeholder="Email"/>
                         </label><br/>
                         <label>Password
                             <input type="password" name="password" placeholder="password"/>

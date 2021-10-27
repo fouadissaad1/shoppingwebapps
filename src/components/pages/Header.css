@@ -88,14 +88,13 @@ a {
     .toggle-button {
         display: flex;
     }
-
     .navbar-links {
         display: none;
         width: 100%;
     }
 
     .navbar {
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-start;
     }
 
@@ -139,6 +138,9 @@ a {
     .navbar-links ul {
         width: 100%;
         flex-direction: column;
+    }
+    .toggle-button{
+        margin-left: auto;
     }
 
     .navbar-links li {
