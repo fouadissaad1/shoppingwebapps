@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 function Footer() {
     return (
-
         <MDBFooter className="footer">
             <MDBContainer fluid>
                 <MDBRow>
@@ -13,7 +12,6 @@ function Footer() {
                         <h5>Exclusive Services</h5>
                         <ul className="list-unstyled">
                             <li>
-
                                 <Link to="/Book">Book an Appointement</Link>
                             </li>
                             <li>

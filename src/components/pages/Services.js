@@ -17,29 +17,20 @@ export function Services() {
                 <MDBCol size={3}></MDBCol>
                 <MDBCol size={3}>
                     <img
-                        src="https://mdbootstrap.com/img/new/standard/city/047.jpg"
+                        src="https://firebasestorage.googleapis.com/v0/b/shopping-ef663.appspot.com/o/images%2Fservices%2Fbaby.JPG?alt=media&token=92d5043d-310b-41db-8624-05a99942c446"
                         className="img-fluid rounded-pill"
                         alt=""
                     />
-                    <img
-                        src="https://mdbootstrap.com/img/new/standard/city/047.jpg"
-                        className="img-fluid rounded-pill"
-                        alt=""
-                    />
+                    <br/>
+
                 </MDBCol>
                 <MDBCol size={3}>
-                    <img
-                        src="https://mdbootstrap.com/img/new/standard/city/047.jpg"
-                        className="img-fluid rounded-pill"
-                        alt=""
-                    />
-                    <img
-                        src="https://mdbootstrap.com/img/new/standard/city/047.jpg"
+                     <img
+                        src="https://firebasestorage.googleapis.com/v0/b/shopping-ef663.appspot.com/o/images%2Fservices%2Fbeauty.JPG?alt=media&token=4b10e031-7bb9-404e-b4fb-82234a845004"
                         className="img-fluid rounded-pill"
                         alt=""
                     />
                 </MDBCol>
-                <MDBCol size={3}></MDBCol>
             </MDBRow>
             <hr/>
             <MDBRow>
@@ -52,7 +43,7 @@ export function Services() {
                 <MDBCol size={3}>
                     <img
                         src="https://mdbootstrap.com/img/new/standard/city/047.jpg"
-                        class="img-fluid rounded"
+                        className="img-fluid rounded"
                         alt=""
                     />
                 </MDBCol>

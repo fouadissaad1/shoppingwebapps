@@ -32,7 +32,7 @@ function Women(props) {
                     <MDBCard style={{maxWidth: '22rem'}}>
                         <img src={women.image} width={300} alt="women's"/>
                         <MDBCardBody>
-                            <MDBCardTitle class="red-text">{women.name}</MDBCardTitle>
+                            <MDBCardTitle className="red-text">{women.name}</MDBCardTitle>
                             <MDBCardText>
                                 size: {women.size}
                             </MDBCardText>

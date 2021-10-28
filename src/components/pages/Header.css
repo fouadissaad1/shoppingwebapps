@@ -88,6 +88,7 @@ a {
     .toggle-button {
         display: flex;
     }
+
     .navbar-links {
         display: none;
         width: 100%;
@@ -118,7 +119,6 @@ a {
     }
 }
 
-
 @media (max-width: 990px) {
     .toggle-button {
         display: flex;
@@ -139,7 +139,8 @@ a {
         width: 100%;
         flex-direction: column;
     }
-    .toggle-button{
+
+    .toggle-button {
         margin-left: auto;
     }
 

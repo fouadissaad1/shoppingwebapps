@@ -41,14 +41,13 @@ export function Header() {
                                 <NavLink to="/Contact" className="nav-link">Contact</NavLink>
                             </MDBNavItem>
                             <MDBNavItem className="navbar-item">
-                                <NavLink to="/Login"  className="nav-link">
+                                <NavLink to="/Login" className="nav-link">
                                     <MDBIcon icon="user">
                                         Login
                                     </MDBIcon>
                                 </NavLink>
                             </MDBNavItem>
-
-                        </ul >
+                        </ul>
                     </div>
                 </MDBNavbar>
             </MDBContainer>

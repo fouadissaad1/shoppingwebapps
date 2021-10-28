@@ -6,12 +6,12 @@ function Register() {
     const history = useHistory();
     const handleSubmit = (e) => {
         e.preventDefault();
-        const { email, password } = e.target.elements;
+        const {email, password} = e.target.elements;
         try {
-            firebaseConfig.auth().createUserWithEmailAndPassword(email.value,password.value);
-                history.push("/")
+            firebaseConfig.auth().createUserWithEmailAndPassword(email.value, password.value);
+            history.push("/")
 
-        }catch (error){
+        } catch (error) {
             if (error.code === 'auth/email-already-in-use') {
                 alert('That email address is already in use!')
             }
@@ -28,14 +28,14 @@ function Register() {
                 <MDBCol size={4}/>
                 <MDBCol size={4}>
                     <h1>Sign up</h1>
-                    <form onSubmit={handleSubmit} >
-                        <label for="email">
+                    <form onSubmit={handleSubmit}>
+                        <label htmlFor="email">
                             email <br/>
                             <input name="email" type="email" placeholder={"email"} required/>
                         </label>
-                        <label for="password">
+                        <label htmlFor="password">
                             Password<br/>
-                            <input name="password" type={"Password"} placeholder={"Password"} />
+                            <input name="password" type={"Password"} placeholder={"Password"}/>
                             <br/><br/>
                             <button type={"submit"}>Sign Up</button>
                         </label>

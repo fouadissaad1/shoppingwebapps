@@ -41,7 +41,7 @@ function Childs(props) {
                 <MDBCard style={{maxWidth: '22rem'}}>
                     <img src={childs.image} width={300} alt="childeren"/>
                     <MDBCardBody>
-                        <MDBCardTitle class="red-text">{childs.name}</MDBCardTitle>
+                        <MDBCardTitle className="red-text">{childs.name}</MDBCardTitle>
                         <MDBCardText>
                             color: {childs.color}
                         </MDBCardText>
@@ -64,7 +64,6 @@ export function Children() {
         console.log(childeren);
         setChilderenFromDb(childeren);
     }
-
     useEffect(() => {
         LoadChilderen();
     }, [])
