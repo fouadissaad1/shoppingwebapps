@@ -8,6 +8,7 @@ export async function getTeamsFromDb() {
     const result = await firebaseConfig.firestore().collection(COLLECTION_TEAMS).get();
     if (result.empty) return [];
     return result.docs.map(doc => ({...doc.data(), id: doc.id}));
+
 }
 
 const COLLECTION_MENS = "mens";
