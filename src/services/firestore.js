@@ -12,10 +12,7 @@ export const firebaseConfig = firebase.initializeApp({
     appId:process.env.REACT_APP_FIREBASE_APPID,
     measurementId:process.env.REACT_APP_FIREBASE_MEASUREMENTID
 });
-
-
 console.log({firebaseConfig});
-
 // if already initialized, use that one
 // if (!firebase.apps.length) firebase.initializeApp(firebaseConfig);
 //
@@ -24,6 +21,4 @@ console.log({firebaseConfig});
 //      console.log(`connection to database is ok`);
 //  else
 //      console.log(`ERROR: no connection to database`)
-
-
 export default firebaseConfig;
