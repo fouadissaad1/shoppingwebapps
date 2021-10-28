@@ -8,6 +8,8 @@ import { useState } from "react";
 export function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
+
+
     return (
         <>
             <MDBContainer fluid>
@@ -17,7 +19,7 @@ export function Header() {
                             <strong className="white-text">Shopping</strong>
                         </MDBAnimation>
                     </MDBNavbarBrand>
-                    <MDBHamburgerToggler className="toggle-button" id="hamburger1" color="#d3531a" />
+                    <MDBHamburgerToggler className="toggle-button" id="hamburger1" color="#d3531a" onClick={toggle}/>
                     <div className="navbar-links">
                         <ul>
                             <MDBNavItem className="navbar-item">
@@ -39,10 +41,13 @@ export function Header() {
                                 <NavLink to="/Contact" className="nav-link">Contact</NavLink>
                             </MDBNavItem>
                             <MDBNavItem className="navbar-item">
-                                <NavLink to="/Login" className="nav-link">
-                                    <MDBIcon icon="user">Login</MDBIcon>
+                                <NavLink to="/Login"  className="nav-link">
+                                    <MDBIcon icon="user">
+                                        Login
+                                    </MDBIcon>
                                 </NavLink>
                             </MDBNavItem>
+
                         </ul >
                     </div>
                 </MDBNavbar>

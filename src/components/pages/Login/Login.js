@@ -1,10 +1,29 @@
 import "./Login.css";
 import { MDBCol, MDBContainer, MDBRow } from "mdb-react-ui-kit";
-import { NavLink } from "react-router-dom";
+import { NavLink} from "react-router-dom";
+import { useCallback} from "react";
+import firebaseConfig from "../../../services/firestore";
+import { useHistory } from "react-router-dom";
 
 
 function Login() {
+    const history = useHistory();
+    const handleLogin = useCallback(
+        async event => {
+            event.preventDefault();
+            const { email, password } = event.target.elements;
+            try {
+                await firebaseConfig
+                    .auth()
+                    .signInWithEmailAndPassword(email.value, password.value);
+                    history.push("/Logout")
 
+            } catch (error) {
+                alert(error);
+            }
+        },
+        []
+    );
 
 
     return (<MDBContainer>
@@ -16,7 +35,7 @@ function Login() {
                 <MDBCol size={4}>
                     <h1>Login</h1>
                     <br/>
-                    <form>
+                    <form onSubmit={handleLogin}>
                         <label className={"label"}>Username
                             <input type="email" name="email" placeholder="Email"/>
                         </label><br/>

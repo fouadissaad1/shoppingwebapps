@@ -17,6 +17,8 @@ import Services from "./components/pages/Services";
 import Delivery from "./components/pages/Delivery";
 import "./services/firestore";
 import Register from "./components/pages/signup/Register";
+import Logout from "./components/pages/LoginOut/Logout";
+
 
 function App() {
     return (
@@ -35,6 +37,8 @@ function App() {
                 <Route path="/Services" component={Services}/>
                 <Route path="/Delivery" component={Delivery}/>
                 <Route path="/Register" component={Register}/>
+                <Route path="/Logout" component={Logout}/>
+
             </switch>
             <Footer/>
         </Router>

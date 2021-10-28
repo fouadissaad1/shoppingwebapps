@@ -1,20 +1,19 @@
 import { MDBCol, MDBContainer, MDBRow } from "mdb-react-ui-kit";
-import { auth } from "firebase-admin/lib/auth/auth-namespace";
 import firebaseConfig from "../../../services/firestore";
-import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 function Register() {
-    const [currentUser, setCurrentUser] = useState(null);
+    const history = useHistory();
     const handleSubmit = (e) => {
         e.preventDefault();
         const { email, password } = e.target.elements;
         try {
-            firebaseConfig.auth().createUserWithEmailAndPassword(email.value,password.value)
-                .then(()=>setCurrentUser(true))
+            firebaseConfig.auth().createUserWithEmailAndPassword(email.value,password.value);
+                history.push("/")
+
         }catch (error){
             if (error.code === 'auth/email-already-in-use') {
                 alert('That email address is already in use!')
-
             }
 
             if (error.code === 'auth/invalid-email') {
