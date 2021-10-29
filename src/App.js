@@ -40,7 +40,7 @@ function App() {
                 <Route path="/Delivery" component={Delivery}/>
                 <Route path="/Register" component={Register}/>
                 <Route path="/Logout" component={Logout}/>
-                <Route path="*/*" component={Error}/>
+                <Route path="*" component={Error}/>
             </Switch>
             <Footer/>
         </BrowserRouter>
