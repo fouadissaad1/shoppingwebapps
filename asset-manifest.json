@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/shoppingwebapps/static/css/main.5d97fb8e.chunk.css",
-    "main.js": "/shoppingwebapps/static/js/main.3c3d510f.chunk.js",
-    "main.js.map": "/shoppingwebapps/static/js/main.3c3d510f.chunk.js.map",
-    "runtime-main.js": "/shoppingwebapps/static/js/runtime-main.cfac7732.js",
-    "runtime-main.js.map": "/shoppingwebapps/static/js/runtime-main.cfac7732.js.map",
-    "static/css/2.59ff7167.chunk.css": "/shoppingwebapps/static/css/2.59ff7167.chunk.css",
-    "static/js/2.6e51042f.chunk.js": "/shoppingwebapps/static/js/2.6e51042f.chunk.js",
-    "static/js/2.6e51042f.chunk.js.map": "/shoppingwebapps/static/js/2.6e51042f.chunk.js.map",
-    "index.html": "/shoppingwebapps/index.html",
-    "static/css/2.59ff7167.chunk.css.map": "/shoppingwebapps/static/css/2.59ff7167.chunk.css.map",
-    "static/css/main.5d97fb8e.chunk.css.map": "/shoppingwebapps/static/css/main.5d97fb8e.chunk.css.map",
-    "static/js/2.6e51042f.chunk.js.LICENSE.txt": "/shoppingwebapps/static/js/2.6e51042f.chunk.js.LICENSE.txt",
-    "static/media/mdb.css": "/shoppingwebapps/static/media/arrow_right.f7c6ac6d.svg",
-    "static/media/all.min.css": "/shoppingwebapps/static/media/fa-solid-900.eeccf4f6.woff"
+    "main.css": "/deployShop/static/css/main.5d97fb8e.chunk.css",
+    "main.js": "/deployShop/static/js/main.3c3d510f.chunk.js",
+    "main.js.map": "/deployShop/static/js/main.3c3d510f.chunk.js.map",
+    "runtime-main.js": "/deployShop/static/js/runtime-main.bcbd462a.js",
+    "runtime-main.js.map": "/deployShop/static/js/runtime-main.bcbd462a.js.map",
+    "static/css/2.cd0e7546.chunk.css": "/deployShop/static/css/2.cd0e7546.chunk.css",
+    "static/js/2.42f8a51a.chunk.js": "/deployShop/static/js/2.42f8a51a.chunk.js",
+    "static/js/2.42f8a51a.chunk.js.map": "/deployShop/static/js/2.42f8a51a.chunk.js.map",
+    "index.html": "/deployShop/index.html",
+    "static/css/2.cd0e7546.chunk.css.map": "/deployShop/static/css/2.cd0e7546.chunk.css.map",
+    "static/css/main.5d97fb8e.chunk.css.map": "/deployShop/static/css/main.5d97fb8e.chunk.css.map",
+    "static/js/2.42f8a51a.chunk.js.LICENSE.txt": "/deployShop/static/js/2.42f8a51a.chunk.js.LICENSE.txt",
+    "static/media/mdb.css": "/deployShop/static/media/arrow_right.f7c6ac6d.svg",
+    "static/media/all.min.css": "/deployShop/static/media/fa-solid-900.eeccf4f6.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.cfac7732.js",
-    "static/css/2.59ff7167.chunk.css",
-    "static/js/2.6e51042f.chunk.js",
+    "static/js/runtime-main.bcbd462a.js",
+    "static/css/2.cd0e7546.chunk.css",
+    "static/js/2.42f8a51a.chunk.js",
     "static/css/main.5d97fb8e.chunk.css",
     "static/js/main.3c3d510f.chunk.js"
   ]
