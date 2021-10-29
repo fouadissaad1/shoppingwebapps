@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.ddb5d896.chunk.css",
-    "main.js": "/static/js/main.723fd7c4.chunk.js",
-    "main.js.map": "/static/js/main.723fd7c4.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.8d16126c.js",
-    "runtime-main.js.map": "/static/js/runtime-main.8d16126c.js.map",
-    "static/css/2.a6e1ac2b.chunk.css": "/static/css/2.a6e1ac2b.chunk.css",
-    "static/js/2.9c78375e.chunk.js": "/static/js/2.9c78375e.chunk.js",
-    "static/js/2.9c78375e.chunk.js.map": "/static/js/2.9c78375e.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/2.a6e1ac2b.chunk.css.map": "/static/css/2.a6e1ac2b.chunk.css.map",
-    "static/css/main.ddb5d896.chunk.css.map": "/static/css/main.ddb5d896.chunk.css.map",
-    "static/js/2.9c78375e.chunk.js.LICENSE.txt": "/static/js/2.9c78375e.chunk.js.LICENSE.txt",
-    "static/media/mdb.css": "/static/media/arrow_right.f7c6ac6d.svg",
-    "static/media/all.min.css": "/static/media/fa-solid-900.eeccf4f6.woff"
+    "main.css": "/deployShop/static/css/main.ddb5d896.chunk.css",
+    "main.js": "/deployShop/static/js/main.723fd7c4.chunk.js",
+    "main.js.map": "/deployShop/static/js/main.723fd7c4.chunk.js.map",
+    "runtime-main.js": "/deployShop/static/js/runtime-main.bcbd462a.js",
+    "runtime-main.js.map": "/deployShop/static/js/runtime-main.bcbd462a.js.map",
+    "static/css/2.cd0e7546.chunk.css": "/deployShop/static/css/2.cd0e7546.chunk.css",
+    "static/js/2.42f8a51a.chunk.js": "/deployShop/static/js/2.42f8a51a.chunk.js",
+    "static/js/2.42f8a51a.chunk.js.map": "/deployShop/static/js/2.42f8a51a.chunk.js.map",
+    "index.html": "/deployShop/index.html",
+    "static/css/2.cd0e7546.chunk.css.map": "/deployShop/static/css/2.cd0e7546.chunk.css.map",
+    "static/css/main.ddb5d896.chunk.css.map": "/deployShop/static/css/main.ddb5d896.chunk.css.map",
+    "static/js/2.42f8a51a.chunk.js.LICENSE.txt": "/deployShop/static/js/2.42f8a51a.chunk.js.LICENSE.txt",
+    "static/media/mdb.css": "/deployShop/static/media/arrow_right.f7c6ac6d.svg",
+    "static/media/all.min.css": "/deployShop/static/media/fa-solid-900.eeccf4f6.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.8d16126c.js",
-    "static/css/2.a6e1ac2b.chunk.css",
-    "static/js/2.9c78375e.chunk.js",
+    "static/js/runtime-main.bcbd462a.js",
+    "static/css/2.cd0e7546.chunk.css",
+    "static/js/2.42f8a51a.chunk.js",
     "static/css/main.ddb5d896.chunk.css",
     "static/js/main.723fd7c4.chunk.js"
   ]
