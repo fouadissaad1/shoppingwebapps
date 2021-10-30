@@ -32,24 +32,6 @@ export function Services() {
                     />
                 </MDBCol>
             </MDBRow>
-            <hr/>
-            <MDBRow>
-                <MDBCol size={3}></MDBCol>
-                <MDBCol size={3}>
-                    <h3>John Lewis Rentals Powered by fat LLALMA</h3>
-                    <p>Rent our furniture, whenever youneed it, to create a look you love without the momitment</p>
-                    <p>find out more Link</p>
-                </MDBCol>
-                <MDBCol size={3}>
-                    <img
-                        src="https://mdbootstrap.com/img/new/standard/city/047.jpg"
-                        className="img-fluid rounded"
-                        alt=""
-                    />
-                </MDBCol>
-                <MDBCol size={3}></MDBCol>
-            </MDBRow>
-            <hr/>
         </MDBContainer>
 
     )
