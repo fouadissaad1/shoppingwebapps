@@ -1,7 +1,9 @@
 export function Delivery() {
     return (
         <div>
-            <h3>Delivery</h3>
+            <div>Delivery Category
+            </div>
+
         </div>
     )
 }
