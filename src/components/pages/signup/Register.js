@@ -25,8 +25,8 @@ function Register() {
         <MDBContainer>
             <br/><br/>
             <MDBRow>
-                <MDBCol size="3"/>
-                <MDBCol size="6">
+                <MDBCol md="3"/>
+                <MDBCol md="6">
                     <h1 className="text-center md-4">
                         <MDBIcon icon="user-plus"/>
                         Sign up</h1>
