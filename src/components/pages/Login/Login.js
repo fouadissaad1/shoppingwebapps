@@ -1,8 +1,8 @@
-import "./Login.css";
-import { MDBCol, MDBContainer, MDBRow } from "mdb-react-ui-kit";
+import { MDBBtn, MDBCol, MDBContainer, MDBIcon, MDBInput, MDBRow } from "mdb-react-ui-kit";
 import { NavLink, useHistory } from "react-router-dom";
 import { useCallback, useState } from "react";
 import firebaseConfig from "../../../services/firestore";
+import { MDBLink } from "mdbreact";
 
 function Login() {
     const [message, setMessage] = useState('')
@@ -31,31 +31,51 @@ function Login() {
     return (<MDBContainer>
             <br/><br/>
             <MDBRow>
-                <MDBCol size={4}>
-
-                </MDBCol>
-                <MDBCol size={4}>
-                    <h1>Login</h1>
+                <MDBCol md="3"/>
+                <MDBCol md="6">
+                    <h1 className="text-center md-4">
+                        <MDBIcon icon="lock"/>
+                        Login</h1>
                     <br/>
                     <form onSubmit={handleLogin}>
-                        <label className={"label"}>Username<br/>
-                            <input type="email" name="email" placeholder="Email"
-                                   onChange={(e) => setCookieFunction(e.target.value)}/>
-                        </label><br/>
-                        <label>Password <br/>
-                            <input type="password" name="password" placeholder="password" />
-                        </label>
                         <br/>
-                        <button type="submit">Login</button>
+                        <div className="grey-text">
+                            <MDBIcon icon="envelope"/>
+                            <MDBInput label="type your email" type="email" name="email" placeholder="Email"
+                                      onChange={(e) => setCookieFunction(e.target.value)}/>
+                            <MDBIcon icon="lock"/>
+                            <MDBInput label="Type your password" name="password" placeholder="Password"/>
+                            <br/>
+                        </div>
+                        <div className="text-center">
+                            <MDBBtn type="submit">Login</MDBBtn>
+                        </div>
+
                     </form>
                     <span style={{
                         fontWeight: 'bold',
                         color: 'red',
                     }}>{message}</span>
                     <br/>
-                    <NavLink to="/Register" className="nav-link" aria-current="page">Register</NavLink>
+                    <div>
+                        <p className="font-small grey-text mt-3">
+                            Don't have en account? <NavLink to="/Register" className="text-white ml-1 font-weight-bold"
+                                                            aria-current="page">Register</NavLink>
+                        </p>
+                    </div>
+                    <div>
+                        <p className="font-small grey-text mt-3">
+                            Forgot
+                            <NavLink to="#" className="text-white ml-1 font-weight-bold"
+                                     aria-current="page">Password</NavLink>
+                        </p>
+                    </div>
+
+
+
                 </MDBCol>
-                <MDBCol size={4}></MDBCol>
+
+
             </MDBRow>
             <MDBRow/>
         </MDBContainer>
