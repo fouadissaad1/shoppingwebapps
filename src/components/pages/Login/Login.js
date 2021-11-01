@@ -32,7 +32,7 @@ function Login() {
                 <MDBCol md="3"/>
                 <MDBCol md="6">
                     <h1 className="text-center md-4">
-                        <MDBIcon icon="f234"/>
+                        <MDBIcon icon="sign-in-alt"/>
                         Login</h1>
                     <br/>
                     <form onSubmit={handleLogin}>
