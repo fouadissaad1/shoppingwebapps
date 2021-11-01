@@ -1,4 +1,4 @@
-import { MDBCol, MDBContainer, MDBRow } from "mdb-react-ui-kit";
+import { MDBBtn, MDBCol, MDBContainer, MDBIcon, MDBInput, MDBRow } from "mdb-react-ui-kit";
 import firebaseConfig from "../../../services/firestore";
 import { useHistory } from "react-router-dom";
 
@@ -25,23 +25,25 @@ function Register() {
         <MDBContainer>
             <br/><br/>
             <MDBRow>
-                <MDBCol size={4}/>
-                <MDBCol size={4}>
-                    <h1>Sign up</h1>
+                <MDBCol size="3"/>
+                <MDBCol size="6">
+                    <h1 className="text-center md-4">
+                        <MDBIcon icon="user-plus"/>
+                        Sign up</h1>
                     <form onSubmit={handleSubmit}>
-                        <label htmlFor="email">
-                            email <br/>
-                            <input name="email" type="email" placeholder={"email"} required/>
-                        </label>
-                        <label htmlFor="password">
-                            Password<br/>
-                            <input name="password" type={"Password"} placeholder={"Password"}/>
-                            <br/><br/>
-                            <button type={"submit"}>Sign Up</button>
-                        </label>
+                        <br/>
+                        <div className="grey-text">
+                            <MDBIcon icon="envelope"/>
+                            <MDBInput name="email" type="email" placeholder={"email"} required/>
+                            <MDBIcon icon="lock"/>
+                            <MDBInput name="password" type={"Password"} placeholder={"Password"} required/>
+                            <br/>
+                        </div>
+                        <div className="text-center">
+                            <MDBBtn type={"submit"}>Sign Up</MDBBtn>
+                        </div>
                     </form>
                 </MDBCol>
-                <MDBCol size={4}/>
             </MDBRow>
         </MDBContainer>
     )

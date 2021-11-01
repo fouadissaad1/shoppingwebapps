@@ -2,7 +2,6 @@ import { MDBBtn, MDBCol, MDBContainer, MDBIcon, MDBInput, MDBRow } from "mdb-rea
 import { NavLink, useHistory } from "react-router-dom";
 import { useCallback, useState } from "react";
 import firebaseConfig from "../../../services/firestore";
-import { MDBLink } from "mdbreact";
 
 function Login() {
     const [message, setMessage] = useState('')
@@ -27,14 +26,13 @@ function Login() {
         },
         []
     );
-
     return (<MDBContainer>
             <br/><br/>
             <MDBRow>
                 <MDBCol md="3"/>
                 <MDBCol md="6">
                     <h1 className="text-center md-4">
-                        <MDBIcon icon="lock"/>
+                        <MDBIcon icon="f234"/>
                         Login</h1>
                     <br/>
                     <form onSubmit={handleLogin}>
@@ -44,13 +42,13 @@ function Login() {
                             <MDBInput label="type your email" type="email" name="email" placeholder="Email"
                                       onChange={(e) => setCookieFunction(e.target.value)}/>
                             <MDBIcon icon="lock"/>
-                            <MDBInput label="Type your password" name="password" placeholder="Password"/>
+                            <MDBInput label="Type your password" type="password" name="password"
+                                      placeholder="Password"/>
                             <br/>
                         </div>
                         <div className="text-center">
                             <MDBBtn type="submit">Login</MDBBtn>
                         </div>
-
                     </form>
                     <span style={{
                         fontWeight: 'bold',
@@ -70,12 +68,7 @@ function Login() {
                                      aria-current="page">Password</NavLink>
                         </p>
                     </div>
-
-
-
                 </MDBCol>
-
-
             </MDBRow>
             <MDBRow/>
         </MDBContainer>
