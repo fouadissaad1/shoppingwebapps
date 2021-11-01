@@ -1,7 +1,6 @@
 import { MDBBtn, MDBCol, MDBContainer, MDBIcon, MDBInput, MDBRow } from "mdb-react-ui-kit";
 import emailjs from 'emailjs-com';
 
-
 const Book = () => {
     const sendEmail = (e) => {
         e.preventDefault();
