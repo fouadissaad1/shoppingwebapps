@@ -85,7 +85,7 @@ export function Children() {
                     {
                         childerenFromDb.map((c, i) =>
                             <MDBCol>
-                                <Childs childs={c} key={i}/>
+                                <Childs childs={c} key={i} />
                             </MDBCol>)
                     }
                 </MDBRow>

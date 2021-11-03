@@ -5,7 +5,7 @@ import React from "react";
 export function Teams(props) {
     const {teams} = props;
     return <MDBTable striped className="table">
-        <MDBTableHead color="primary-color" textWhite>
+        <MDBTableHead color="primary-color">
             <tr>
                 <th>Name:</th>
                 <th>Description</th>
