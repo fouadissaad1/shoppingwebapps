@@ -1,56 +1,58 @@
-import './Header.css';
-import { NavLink } from 'react-router-dom';
-import { MDBContainer, MDBIcon, MDBNavbarBrand } from "mdb-react-ui-kit";
-import { MDBAnimation, MDBHamburgerToggler, MDBNavbar, MDBNavItem } from "mdbreact";
+import './Header.css'
+import { MDBIcon, MDBNavbar, MDBNavbarBrand } from "mdb-react-ui-kit";
+import { MDBAnimation, MDBNavItem } from "mdbreact";
+import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
-
 export function Header() {
-    const [isOpen, setIsOpen] = useState(false);
-    const toggle = () => setIsOpen(!isOpen);
-
+    const [open, setOpen]=useState(false);
 
     return (
         <>
-            <MDBContainer fluid>
-                <MDBNavbar className="navbar">
-                    <MDBNavbarBrand className="brand-title">
-                        <MDBAnimation type="bounce" infinite>
-                            <strong className="white-text">Shopping</strong>
-                        </MDBAnimation>
-                    </MDBNavbarBrand>
-                    <MDBHamburgerToggler className="toggle-button" id="hamburger1" color="#d3531a" onClick={toggle}/>
-                    <div className="navbar-links">
-                        <ul>
-                            <MDBNavItem className="navbar-item">
-                                <NavLink to="/" className="nav-link" aria-current="page">Home</NavLink>
-                            </MDBNavItem>
-                            <MDBNavItem className="navbar-item">
-                                <NavLink to="/Men" className="nav-link">Men</NavLink>
-                            </MDBNavItem>
-                            <MDBNavItem className="navbar-item">
-                                <NavLink to="/Women" className="nav-link">Women</NavLink>
-                            </MDBNavItem>
-                            <MDBNavItem className="navbar-item">
-                                <NavLink to="/Children" className="nav-link">Childeren</NavLink>
-                            </MDBNavItem>
-                            <MDBNavItem className="navbar-item">
-                                <NavLink to="/About" className="nav-link">About</NavLink>
-                            </MDBNavItem>
-                            <MDBNavItem className="navbar-item">
-                                <NavLink to="/Contact" className="nav-link">Contact</NavLink>
-                            </MDBNavItem>
-                            <MDBNavItem className="navbar-item">
-                                <NavLink to="/Login" className="nav-link">
-                                    <MDBIcon icon="user">
-                                        Login
-                                    </MDBIcon>
-                                </NavLink>
-                            </MDBNavItem>
-                        </ul>
-                    </div>
-                </MDBNavbar>
-            </MDBContainer>
+            <MDBNavbar className="navbar">
+                <MDBNavbarBrand className="brand-title">
+                    <MDBAnimation type="bounce" infinite>
+                        <strong className="white-text">Shopping</strong>
+                    </MDBAnimation>
+                </MDBNavbarBrand>
+                <a href={"#"} className="toggle-button">
+                    <span className="bar"></span>
+                    <span className="bar"></span>
+                    <span className="bar"></span>
+                </a>
+                <div className="navbar-links">
+                    <ul className="navbar-links">
+                        <MDBNavItem active>
+                            <NavLink to="/" aria-current="page">Home</NavLink>
+                        </MDBNavItem>
+                        <MDBNavItem className="navbar-item">
+                            <NavLink to="/Men" >Men</NavLink>
+                        </MDBNavItem>
+                        <MDBNavItem className="navbar-item">
+                            <NavLink to="/Women">Women</NavLink>
+                        </MDBNavItem>
+                        <MDBNavItem className="navbar-item">
+                            <NavLink to="/Children">Childeren</NavLink>
+                        </MDBNavItem>
+                        <MDBNavItem className="navbar-item">
+                            <NavLink to="/About">About</NavLink>
+                        </MDBNavItem>
+                        <MDBNavItem className="navbar-item">
+                            <NavLink to="/Contact" >Contact</NavLink>
+                        </MDBNavItem>
+                        <MDBNavItem className="navbar-item">
+                            <NavLink to="/Login">
+                                <MDBIcon icon="user">
+                                    Login
+                                </MDBIcon>
+                            </NavLink>
+                        </MDBNavItem>
+                    </ul>
+                    <i onClick={()=>setOpen(!open)} className="navbar-links" navbar></i>
+                </div>
+
+            </MDBNavbar>
+
         </>
     );
 }

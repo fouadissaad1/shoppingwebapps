@@ -1,53 +1,78 @@
-import { MDBCol, MDBContainer, MDBIcon, MDBRow } from "mdbreact";
+import './home.css'
 import React from "react";
-
+import { MDBContainer } from "mdb-react-ui-kit";
+import { NavLink } from "react-router-dom";
 function Home() {
     return (
+
         <>
-            <MDBContainer fluid className="purple-gradient color-block-5 mb-3 mx-auto rounded-circle z-depth-1">
-                <br/> <br/>
-                <MDBRow>
-                    <MDBCol lg="3">
-                        <h1 className="red-text flex-center">COATS FOR</h1>
-                    </MDBCol>
-                    <MDBCol lg="3">
-                        <MDBIcon icon="check"/>   <p>Women's</p>
-                    </MDBCol>
-                    <MDBCol lg="3">
-                        <MDBIcon icon="check"/> <p>Men's</p>
-                    </MDBCol>
-                    <MDBCol lg="3">
-                        <MDBIcon icon="check"/>  <p>Kids</p>
-                    </MDBCol>
-                </MDBRow>
-                <MDBRow>
-                    <MDBCol lg="3" md="12">
-                        <img
-                            src="https://firebasestorage.googleapis.com/v0/b/shopping-ef663.appspot.com/o/images%2Fwelcome%2Fdiy-cat-costumes-1565110063.jpg?alt=media&token=b2ab3cda-10ae-4064-98f4-272ebb856397"
-                            className="img-fluid z-depth-1" alt=""/>
-                    </MDBCol>
-                    <MDBCol lg="3" md="12">
-                        <img
-                            src="https://firebasestorage.googleapis.com/v0/b/shopping-ef663.appspot.com/o/images%2Fwelcome%2Fabdf6295852cb3fa42bb5b55556848a6.jpg?alt=media&token=eec82a32-f0f2-4e53-aac4-e25fa8a01c2c"
-                            className="img-fluid z-depth-1-half"
-                            alt=""/>
-                    </MDBCol>
-                    <MDBCol lg="3" md="12">
-                        <img
-                            src="https://firebasestorage.googleapis.com/v0/b/shopping-ef663.appspot.com/o/images%2Fwelcome%2FJenniferKellyG-201635210035178721None.jpg?alt=media&token=b2fba25c-720c-42db-94b6-6be39719e301"
-                            className="img-fluid z-depth-1-half"
-                            alt=""/>
-                    </MDBCol>
-                    <MDBCol lg="3" md="12">
-                        <img
-                            src="https://firebasestorage.googleapis.com/v0/b/shopping-ef663.appspot.com/o/images%2Fwelcome%2Fkids1.jpg?alt=media&token=77a5f3e9-c597-4632-bfcf-e5dac771e99d"
-                            className="img-fluid z-depth-1-half"
-                            alt=""/>
-                    </MDBCol>
-                    <MDBRow>
-                    </MDBRow>
-                </MDBRow>
+            <MDBContainer fluid className="images">
             </MDBContainer>
+            <br/>
+            <MDBContainer fluid>
+                    <div className="row">
+                        <div className="col-12 intro">
+                            <h1>Shop By Department...!</h1>
+                        </div>
+                    </div>
+            </MDBContainer>
+            <br/>
+            <div className="row">
+                <div className="col-md-6">
+                    <div className="row">
+                        <div className="col-sm-4">
+                            <div className="card greenArticle">
+                                <div className="card-body ">
+                                    <h5 className="card-title">
+                                        <NavLink to="/Women" >Men</NavLink>
+                                    </h5>
+                                    <img
+                                        src="https://firebasestorage.googleapis.com/v0/b/shopping-ef663.appspot.com/o/images%2Fwelcome%2Fistockphoto-1065840316-612x612.jpg?alt=media&token=b82f298e-e542-4c01-b920-4fa577a0e03a"
+                                        className="img-fluid rounded-pill"
+                                        alt=""
+                                    />
+
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-sm-4">
+                            <div className="card greenArticle">
+                                    <div className="card-body ">
+                                        <h5 className="card-title">
+                                            <NavLink to="/Women" >Women</NavLink>
+                                        </h5>
+                                        <img
+                                            src="https://firebasestorage.googleapis.com/v0/b/shopping-ef663.appspot.com/o/images%2Fwelcome%2Fshopping-concept-close-up-portrait-young-beautiful-attractive-redhair-girl-smiling-looking-camera-with-shopping-bag-blue-pastel-background-copy-space_1258-856.jpg?alt=media&token=48abf0f6-c88f-4bd1-b22c-8152295a3805"
+                                            className="img-fluid rounded-pill"
+                                            alt=""
+                                        />
+
+                                    </div>
+                            </div>
+                        </div>
+                        <div className="col-sm-4">
+                            <div className="card greenArticle">
+                                <div className="card-body ">
+                                    <h5 className="card-title">
+                                        <NavLink to="/Children" >Children</NavLink>
+                                        <br/>
+                                        <br/>
+
+                                    </h5>
+                                    <img
+                                        src="https://firebasestorage.googleapis.com/v0/b/shopping-ef663.appspot.com/o/images%2Fwelcome%2Fkids-category-300x300.jpg?alt=media&token=b70b0c05-933c-4bff-a87f-64636e66574f"
+                                        className="img-fluid rounded-pill"
+                                        alt=""
+                                    />
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
         </>
     )
 }
