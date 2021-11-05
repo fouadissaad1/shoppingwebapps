@@ -6,11 +6,15 @@ body {
     padding: 0;
     background-color: black;
 }
+.white-text{
+    font-weight: bold;
+    font-family: cursive;
+}
 .navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: gray;
+    background-color: dimgray;
     color: teal;
     font-size: 20px;
 }
@@ -31,7 +35,7 @@ body {
     display: block;
 }
 .navbar-links li:hover {
-    background-color: navajowhite;
+    background-color: orangered;
 }
 
 .toggle-button{
@@ -54,7 +58,7 @@ body {
     border-radius: 10px;
 }
 
-@media(max-width:660px){
+@media(max-width:2000px){
     .brand-title{
         font-size: 1rem;
     }
@@ -74,9 +78,11 @@ body {
         flex-direction: column;
     }
     .navbar-links li {
+
         text-align: center;
     }
     .navbar-links li a{
+        text-decoration: white;
         padding: .3rem 0.5rem;
     }
     .navbar-links.active{
@@ -84,29 +90,30 @@ body {
     }
 }
 
-@media(max-width:990px){
-    .toggle-button{
-        display: flex;
-    }
-    .navbar-links{
-        display: none;
-        width: 100%;
-    }
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .navbar-links ul {
-        width: 100%;
-        flex-direction: column;
-    }
-    .navbar-links li {
-        text-align: center;
-    }
-    .navbar-links li a{
-        padding: .5rem 1rem;
-    }
-    .navbar-links.active{
-        display: flex;
-    }
-}
+/*@media(min-height:990px){*/
+/*    .toggle-button{*/
+/*        display: flex;*/
+/*    }*/
+
+/*    .navbar-links{*/
+/*        display: none;*/
+/*        width: 100%;*/
+/*    }*/
+/*    .navbar {*/
+/*        flex-direction: column;*/
+/*        align-items: flex-start;*/
+/*    }*/
+/*    .navbar-links ul {*/
+/*        width: 100%;*/
+/*        flex-direction: column;*/
+/*    }*/
+/*    .navbar-links li {*/
+/*        text-align: center;*/
+/*    }*/
+/*    .navbar-links li a{*/
+/*        padding: .5rem 1rem;*/
+/*    }*/
+/*    .navbar-links.active{*/
+/*        display: flex;*/
+/*    }*/
+/*}*/

@@ -7,8 +7,12 @@
 .card-title{
     text-align: center;
     background-color: wheat;
+    font-family: cursive;
 }
 .card-title a{
     color: red;
    font-weight: bold;
+}
+.departement{
+    font-family: cursive;
 }

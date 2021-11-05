@@ -13,7 +13,7 @@ import {
     MDBRow
 } from "mdb-react-ui-kit";
 import { getMensFromDb } from "../../services/firestoreDatabase";
-
+import './Men.css'
 // function Category(props) {
  //     const {category} = props;
  //
@@ -41,10 +41,10 @@ function Mens(props) {
                         <img src={mens.image} width={300} alt="About"/>
                           <MDBCardBody>
                             <MDBCardTitle className="red-text">{mens.name}</MDBCardTitle>
-                            <MDBCardText>
-                                size: {mens.size}  <br/>
-                                color: {mens.color}     <br/>
-                                how much: {mens.prijs}&euro;
+                            <MDBCardText className={"menText"}>
+                                Size: {mens.size}  <br/>
+                                Color: {mens.color}     <br/>
+                                How much: {mens.prijs}&euro;
                             </MDBCardText>
                             <MDBBtn href='#'>Ordre</MDBBtn>
                         </MDBCardBody>

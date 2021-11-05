@@ -13,7 +13,7 @@ function Home() {
                 <MDBRow>
                     <MDBCol md={5}/>
                     <MDBCol md={7}>
-                        <h1>Shop By Department...!</h1>
+                        <h1 className={"departement"}>Shop By Department...!</h1>
                     </MDBCol>
                 </MDBRow>
             </MDBContainer>
