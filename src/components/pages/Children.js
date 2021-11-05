@@ -38,14 +38,12 @@ function Childs(props) {
     return <MDBContainer>
         <MDBRow>
             <MDBCol>
-                <MDBCard style={{maxWidth: '22rem'}}>
+                <MDBCard style={{maxWidth: '15rem'}}>
                     <img src={childs.image} width={300} alt="childeren"/>
                     <MDBCardBody>
                         <MDBCardTitle className="red-text">{childs.name}</MDBCardTitle>
                         <MDBCardText>
-                            color: {childs.color}
-                        </MDBCardText>
-                        <MDBCardText>
+                            color: {childs.color} <br/>
                             how much: {childs.price}&euro;
                         </MDBCardText>
                         <MDBBtn href='#'>Ordre</MDBBtn>
@@ -71,8 +69,13 @@ export function Children() {
         <>
             <MDBContainer fluid>
                 <MDBRow>
-                    <h2>CHILDREN</h2>
+                    <MDBCol md={6}/>
+                    <MDBCol md={4}>
+                        <br/>
+                        <h2 className="titlePage">Childeren</h2>
+                    </MDBCol>
                 </MDBRow>
+                <br/>
                 <MDBRow>
                     {/*{
                         Kids_data.map((c, i) =>

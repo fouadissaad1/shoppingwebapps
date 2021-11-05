@@ -21,26 +21,22 @@ import { getWomenFromDb } from "../../services/firestoreDatabase";
 //           }
 //      </div>
 //  }
+import './Women.css'
 function Women(props) {
     const {women} = props;
     return (
         <MDBContainer>
-            <MDBRow>
-            </MDBRow>
+            <MDBRow/>
             <MDBRow>
                 <MDBCol>
-                    <MDBCard style={{maxWidth: '22rem'}}>
-                        <img src={women.image} width={300} alt="women's"/>
+                    <MDBCard style={{maxWidth: '10rem'}}>
+                        <img src={women.image} alt="women's"/>
                         <MDBCardBody>
                             <MDBCardTitle className="red-text">{women.name}</MDBCardTitle>
                             <MDBCardText>
-                                size: {women.size}
-                            </MDBCardText>
-                            <MDBCardText>
-                                color: {women.color}
-                            </MDBCardText>
-                            <MDBCardText>
-                                how much: {women.prijs}&euro;*
+                                size: {women.size} <br/>
+                                color: {women.color}<br/>
+                                how much: {women.prijs}&euro;
                             </MDBCardText>
                             <MDBBtn href='#'>Ordre</MDBBtn>
                         </MDBCardBody>
@@ -53,31 +49,32 @@ function Women(props) {
 
 export function Womens() {
     const [womenFromDd, setWomensFromDb] = useState([])
-
     async function LoadWomens() {
         const womens = await getWomenFromDb();
         console.log(womens);
         setWomensFromDb(womens);
     }
-
     useEffect(() => {
         LoadWomens();
     }, [])
-
     return (
         <>
             <MDBContainer fluid>
                 <MDBRow>
-                    <h2>Women</h2>
-                    <hr/>
+                    <MDBCol md={6}/>
+                    <MDBCol md={4}>
+                        <br/>
+                            <h2 className="titlePage">Women</h2>
+                    </MDBCol>
                 </MDBRow>
-                <MDBRow>
-                    {/*  {WOMEN_CLOTHING_DATA.map((c, i) =>
-                        <MDBCol>
-                            <Category category={c} key={i}/>
-                        </MDBCol>
-                    )}*/}
-                </MDBRow>
+                {/*<MDBRow>*/}
+                {/*    /!*  {WOMEN_CLOTHING_DATA.map((c, i) =>*/}
+                {/*        <MDBCol>*/}
+                {/*            <Category category={c} key={i}/>*/}
+                {/*        </MDBCol>*/}
+                {/*    )}*!/*/}
+                {/*</MDBRow>*/}
+                <br/>
                 <MDBRow>
                     {
                         womenFromDd.map((c, i) =>

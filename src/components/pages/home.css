@@ -4,3 +4,11 @@
     background-position: right center;
     height: 400px;
 }
+.card-title{
+    text-align: center;
+    background-color: wheat;
+}
+.card-title a{
+    color: red;
+   font-weight: bold;
+}

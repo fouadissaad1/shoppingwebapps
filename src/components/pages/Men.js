@@ -37,17 +37,13 @@ function Mens(props) {
         <MDBContainer>
             <MDBRow>
                 <MDBCol>
-                    <MDBCard style={{maxWidth: '22rem'}}>
+                    <MDBCard style={{maxWidth: '20rem'}}>
                         <img src={mens.image} width={300} alt="About"/>
                           <MDBCardBody>
                             <MDBCardTitle className="red-text">{mens.name}</MDBCardTitle>
                             <MDBCardText>
-                                size: {mens.size}
-                            </MDBCardText>
-                              <MDBCardText>
-                               color: {mens.color}
-                              </MDBCardText>
-                              <MDBCardText>
+                                size: {mens.size}  <br/>
+                                color: {mens.color}     <br/>
                                 how much: {mens.prijs}&euro;
                             </MDBCardText>
                             <MDBBtn href='#'>Ordre</MDBBtn>
@@ -73,10 +69,14 @@ export function Men(){
     return(
         <>
             <MDBContainer fluid>
-                <MDBRow>
-                    <h2>Men</h2>
-                    <hr/>
-                </MDBRow>
+                    <MDBRow>
+                        <MDBCol md={6}/>
+                        <MDBCol md={4}>
+                            <br/>
+                            <h2 className="titlePage">Men</h2>
+                        </MDBCol>
+                    </MDBRow>
+
                 <MDBRow>
                     {mensFromDb.map((c, i) =>
                         <MDBCol>

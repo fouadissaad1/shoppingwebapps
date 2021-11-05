@@ -6,52 +6,41 @@ import { Link } from "react-router-dom";
 function Footer() {
     return (
         <MDBFooter className="footer">
-            <MDBContainer fluid>
-                <MDBRow>
-                    <MDBCol md="4">
-                        <h5>Exclusive Services</h5>
-                        <ul className="list-unstyled">
-                            <li>
-                                <Link to="/Book">Book an Appointement</Link>
-                            </li>
-                            <li>
-                                <Link to="/Services">Exclusive Online Services</Link>
-                            </li>
-                            <li>
-                                <Link to="/Delivery">Delivery</Link>
-                            </li>
-                        </ul>
-                    </MDBCol>
-                    <MDBCol md="4">
-                        <h5 className="title">Links</h5>
-                        <ul className="list-unstyled">
-                            <li>
-                                <Link to="/Contact">Contact us</Link>
-                            </li>
-                            <li>
-                                <Link to="/About">About</Link>
-                            </li>
-                        </ul>
-                    </MDBCol>
-                    <MDBCol md="4">
-                        <h5 className="title">Links</h5>
-                        <ul className="list-unstyled">
-                            <li>
-                                <Link to="/Men">Men's Wear</Link>
-                            </li>
-                            <li>
-                                <Link to="/Women">Women's Wear</Link>
-                            </li>
-                            <li>
-                                <Link to="/Children">Children</Link>
-                            </li>
-                        </ul>
-                    </MDBCol>
-                </MDBRow>
-            </MDBContainer>
             <div className="footer-copyright text-center py-3">
                 <MDBContainer fluid>
-                    <p> &copy; {new Date().getFullYear()} Belgium Country Clothing • Fouad ISSAAD</p>
+                    <MDBRow>
+                        <MDBCol md={9}>
+                            <MDBRow>
+                                <MDBCol md={3}>
+                                    <Link to="/Book">Book an Appointement</Link>
+                                </MDBCol>
+                                <MDBCol md={3}>
+                                    <Link to="/Services">Exclusive Online Services</Link>
+                                </MDBCol>
+                                <MDBCol md={1}>
+                                    <Link to="/Delivery">Delivery</Link>
+                                </MDBCol>
+                                <MDBCol md={1}>
+                                    <Link to="/Contact">Contact </Link>
+                                </MDBCol>
+                                <MDBCol md={1}>
+                                    <Link to="/About"> About</Link>
+                                </MDBCol>
+                                <MDBCol md={1}>
+                                    <Link to="/Men">Men </Link>
+                                </MDBCol>
+                                <MDBCol md={1}>
+                                    <Link to="/Women"> Women </Link>
+                                </MDBCol>
+                                <MDBCol md={1}>
+                                    <Link to="/Children"> Children </Link>
+                                </MDBCol>
+                            </MDBRow>
+                        </MDBCol>
+                        <MDBCol md={3}>
+                            <p> &copy; {new Date().getFullYear()} Belgium Country Clothing • Fouad ISSAAD</p>
+                        </MDBCol>
+                    </MDBRow>
                 </MDBContainer>
             </div>
         </MDBFooter>);
