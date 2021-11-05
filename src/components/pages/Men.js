@@ -42,6 +42,7 @@ function Mens(props) {
                           <MDBCardBody>
                             <MDBCardTitle className="red-text">{mens.name}</MDBCardTitle>
                             <MDBCardText className={"menText"}>
+
                                 Size: {mens.size}  <br/>
                                 Color: {mens.color}     <br/>
                                 How much: {mens.prijs}&euro;
@@ -66,6 +67,7 @@ export function Men(){
         LoadMens();
 
      },[])
+
     return(
         <>
             <MDBContainer fluid>
