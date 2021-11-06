@@ -1,7 +1,11 @@
 import { MDBBtn, MDBCol, MDBContainer, MDBIcon, MDBInput, MDBRow } from "mdb-react-ui-kit";
 import emailjs from 'emailjs-com';
+import { useHistory } from "react-router-dom";
+import { useState } from "react";
 
 const Book = () => {
+    const history=useHistory();
+    const [message, setMessage] = useState('')
     const sendEmail = (e) => {
         e.preventDefault();
         emailjs.sendForm('service_8f7xlud',
@@ -10,8 +14,11 @@ const Book = () => {
             'user_1mepAtzDb4GjUHFo2wNyS')
             .then((result) => {
                 console.log(result.text);
+                setMessage("send booking to departement")
+                history.push("/")
             }, (error) => {
                 console.log(error.text);
+
             });
     };
     return (
@@ -59,13 +66,16 @@ const Book = () => {
                                                   id="exampleFormControlTextarea1"
                                                   rows="7"
                                                   placeholder={"what is you're message?"} required/>
-                                    </label> <br/>
+                                    </label>
                                 </div>
                             </div>
-
                         </div>
                         <MDBBtn value={"Send"} type={"submit"}>Send</MDBBtn>
                     </form>
+                    <span style={{
+                        fontWeight: 'bold',
+                        color: 'red',
+                    }}>{message}</span>
                 </MDBCol>
             </MDBRow>
         </MDBContainer>

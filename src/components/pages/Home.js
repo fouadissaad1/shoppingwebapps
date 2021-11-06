@@ -48,6 +48,7 @@ function Home() {
                                         className="w-100"
                                         alt=""
                                     />
+                                    <div className='mask' style={{backgroundColor: 'rgba(0, 0, 0, 0.6)'}}></div>
                                 </div>
                             </div>
                         </div>
@@ -63,6 +64,7 @@ function Home() {
                                         className="w-100"
                                         alt=""
                                     />
+                                    <div className='mask' style={{backgroundColor: 'rgba(0, 0, 0, 0.6)'}}></div>
                                 </div>
                             </div>
                         </div>
