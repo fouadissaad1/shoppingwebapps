@@ -13,7 +13,15 @@ function Error() {
             <MDBRow>
                 <MDBCol size={3}></MDBCol>
                 <MDBCol size={1}>
-                    <h1 style={{color: "red"}}>4<h1>0</h1><h1 style={{color: "red"}}>4</h1></h1>
+                    <div>
+                        <span style={{color: "red", fontSize: 50}}>4</span>
+                    </div>
+                    <div>
+                        <span style={{color: "red", fontSize: 50}}>0</span>
+                    </div>
+                    <div>
+                        <span style={{color: "red", fontSize: 50}}>4</span>
+                    </div>
                 </MDBCol>
                 <MDBCol size={6}>
                     <br/><br/>
@@ -22,10 +30,8 @@ function Error() {
                         Maybe try on of the links below, click on the top menu
                         or try a search?
                     </p>
-
                     <img width={800} height={400} style={{alignItems: "center"}}
                          src="https://firebasestorage.googleapis.com/v0/b/shopping-ef663.appspot.com/o/images%2Ferror%2F404-error-page-not-found-plug-graphic-vector-19997583.jpg?alt=media&token=2cccf0e9-8c03-4adf-93f3-c09eb315549c"/>
-
                     <MDBBtn to={"/"} onClick={routeChange}>Home</MDBBtn>
                 </MDBCol>
             </MDBRow>

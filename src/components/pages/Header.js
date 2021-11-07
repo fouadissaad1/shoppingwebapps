@@ -5,9 +5,8 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
 export function Header() {
-    const [openMenu, setOpenMenu]=useState(false);
-    const toggleMenu=()=>setOpenMenu(!openMenu);
-
+    const [openMenu, setOpenMenu] = useState(false);
+    const toggleMenu = () => setOpenMenu(!openMenu);
     return (
         <>
             <MDBNavbar className="navbar">
@@ -22,14 +21,13 @@ export function Header() {
                         <span className="bar"></span>
                         <span className="bar"></span>
                     </a>
-
                     <MDBCollapse show={openMenu} navbar>
                         <MDBNavbarNav>
                             <MDBNavItem active>
                                 <NavLink to="/" aria-current="page">Home</NavLink>
                             </MDBNavItem>
                             <MDBNavItem className="navbar-item">
-                                <NavLink to="/Men" >Men</NavLink>
+                                <NavLink to="/Men">Men</NavLink>
                             </MDBNavItem>
                             <MDBNavItem className="navbar-item">
                                 <NavLink to="/Women">Women</NavLink>
@@ -41,7 +39,7 @@ export function Header() {
                                 <NavLink to="/About">About</NavLink>
                             </MDBNavItem>
                             <MDBNavItem className="navbar-item">
-                                <NavLink to="/Contact" >Contact</NavLink>
+                                <NavLink to="/Contact">Contact</NavLink>
                             </MDBNavItem>
                             <MDBNavItem className="navbar-item">
                                 <NavLink to="/Login">
@@ -50,12 +48,10 @@ export function Header() {
                                     </MDBIcon>
                                 </NavLink>
                             </MDBNavItem>
-                        </MDBNavbarNav >
+                        </MDBNavbarNav>
                     </MDBCollapse>
                 </MDBContainer>
-
             </MDBNavbar>
-
         </>
     );
 }
