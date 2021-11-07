@@ -7,10 +7,10 @@ export const firebaseConfig = firebase.initializeApp({
     apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
     authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
     projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-    storageBucket:process.env.REACT_APP_FIREBASE_STORAGEBUCKET,
-    messagingSenderId:process.env.REACT_APP_FIREBASE_MESSAGINSSENDERID,
-    appId:process.env.REACT_APP_FIREBASE_APPID,
-    measurementId:process.env.REACT_APP_FIREBASE_MEASUREMENTID
+    storageBucket: process.env.REACT_APP_FIREBASE_STORAGEBUCKET,
+    messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGINSSENDERID,
+    appId: process.env.REACT_APP_FIREBASE_APPID,
+    measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENTID
 });
 console.log({firebaseConfig});
 // if already initialized, use that one

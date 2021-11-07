@@ -1,7 +1,6 @@
 import { MDBCol, MDBCollapse, MDBContainer, MDBIcon, MDBRow } from "mdb-react-ui-kit";
 import { useState } from "react";
 
-
 export function Delivery() {
     const [showBelivered, setShowBelivered] = useState(false);
     const toggleBelivered = () => setShowBelivered(!showBelivered);
@@ -75,11 +74,7 @@ export function Delivery() {
                         </MDBCollapse>
                     </div>
                 </MDBCol>
-
-
             </MDBRow>
-
-
         </MDBContainer>
     )
 }

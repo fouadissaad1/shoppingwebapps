@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import { useState } from "react";
 
 const Book = () => {
-    const history=useHistory();
+    const history = useHistory();
     const [message, setMessage] = useState('')
     const sendEmail = (e) => {
         e.preventDefault();
@@ -39,15 +39,15 @@ const Book = () => {
                                 <option value="Childeren">Childeren</option>
                             </select>
                             <br/> <br/>
-                        <div>
-                            <select name="service" id="services" className="browser-default custom-select" required>
-                                <option>chose your option</option>
-                                <option value="Buy">Buy</option>
-                                <option value="Meet">Meet</option>
-                                <option value="Delivery">Delivery</option>
-                            </select>
-                        </div>
-                        <br/>
+                            <div>
+                                <select name="service" id="services" className="browser-default custom-select" required>
+                                    <option>chose your option</option>
+                                    <option value="Buy">Buy</option>
+                                    <option value="Meet">Meet</option>
+                                    <option value="Delivery">Delivery</option>
+                                </select>
+                            </div>
+                            <br/>
                             <div className="grey-text">
                                 <label>Date:
                                     <MDBInput type={"date"} name={"date"} required/>
@@ -57,12 +57,13 @@ const Book = () => {
                                     <MDBInput type={"time"} name={"time"} required/>
                                 </label>
                                 <br/>
-                                <label  htmlFor="exampleFormControlTextarea1">Email: <br/>
-                                    <MDBInput type="email" name={"user_email"} placeholder={"What is you' re mail?"} required/>
+                                <label htmlFor="exampleFormControlTextarea1">Email: <br/>
+                                    <MDBInput type="email" name={"user_email"} placeholder={"What is you' re mail?"}
+                                              required/>
                                 </label> <br/>
                                 <div>
                                     <label>Message:<br/>
-                                        <textarea name={"message"}  className="form-control"
+                                        <textarea name={"message"} className="form-control"
                                                   id="exampleFormControlTextarea1"
                                                   rows="7"
                                                   placeholder={"what is you're message?"} required/>
