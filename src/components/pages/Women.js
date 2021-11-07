@@ -22,6 +22,7 @@ import { getWomenFromDb } from "../../services/firestoreDatabase";
 //      </div>
 //  }
 import './Women.css'
+
 function Women(props) {
     const {women} = props;
     return (
@@ -49,11 +50,13 @@ function Women(props) {
 
 export function Womens() {
     const [womenFromDd, setWomensFromDb] = useState([])
+
     async function LoadWomens() {
         const womens = await getWomenFromDb();
         console.log(womens);
         setWomensFromDb(womens);
     }
+
     useEffect(() => {
         LoadWomens();
     }, [])
@@ -64,7 +67,7 @@ export function Womens() {
                     <MDBCol md={6}/>
                     <MDBCol md={4}>
                         <br/>
-                            <h2 className="titlePage">Women</h2>
+                        <h2 className="titlePage">Women</h2>
                     </MDBCol>
                 </MDBRow>
                 {/*<MDBRow>*/}
