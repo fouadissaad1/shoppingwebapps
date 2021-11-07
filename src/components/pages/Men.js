@@ -15,22 +15,21 @@ import {
 import { getMensFromDb } from "../../services/firestoreDatabase";
 import './Men.css'
 // function Category(props) {
- //     const {category} = props;
- //
- //    return <MDBRow>
- //         <MDBCol>
- //             <h3 className="title">{category.name}</h3>
- //         </MDBCol>
- //         <MDBCol>
- //             {
- //
- //                category.products.map((p) => <Mens key={p.id} men={p}/>)
- //
- //             }
- //         </MDBCol>
- //     </MDBRow>
- // }
-
+//     const {category} = props;
+//
+//    return <MDBRow>
+//         <MDBCol>
+//             <h3 className="title">{category.name}</h3>
+//         </MDBCol>
+//         <MDBCol>
+//             {
+//
+//                category.products.map((p) => <Mens key={p.id} men={p}/>)
+//
+//             }
+//         </MDBCol>
+//     </MDBRow>
+// }
 function Mens(props) {
     const {mens} = props;
     return (
@@ -39,12 +38,12 @@ function Mens(props) {
                 <MDBCol>
                     <MDBCard style={{maxWidth: '20rem'}}>
                         <img src={mens.image} width={300} alt="About"/>
-                          <MDBCardBody>
+                        <MDBCardBody>
                             <MDBCardTitle className="red-text">{mens.name}</MDBCardTitle>
                             <MDBCardText className={"menText"}>
 
-                                Size: {mens.size}  <br/>
-                                Color: {mens.color}     <br/>
+                                Size: {mens.size} <br/>
+                                Color: {mens.color} <br/>
                                 How much: {mens.prijs}&euro;
                             </MDBCardText>
                             <MDBBtn href='#'>Ordre</MDBBtn>
@@ -56,29 +55,29 @@ function Mens(props) {
     );
 }
 
-export function Men(){
+export function Men() {
     const [mensFromDb, setMensFromDB] = useState([]);
-     async function LoadMens() {
-         const mens = await getMensFromDb();
-         console.log(mens);
-         setMensFromDB(mens);
-     }
-     useEffect(()=>{
+
+    async function LoadMens() {
+        const mens = await getMensFromDb();
+        console.log(mens);
+        setMensFromDB(mens);
+    }
+
+    useEffect(() => {
         LoadMens();
 
-     },[])
-
-    return(
+    }, [])
+    return (
         <>
             <MDBContainer fluid>
-                    <MDBRow>
-                        <MDBCol md={6}/>
-                        <MDBCol md={4}>
-                            <br/>
-                            <h2 className="titlePage">Men</h2>
-                        </MDBCol>
-                    </MDBRow>
-
+                <MDBRow>
+                    <MDBCol md={6}/>
+                    <MDBCol md={4}>
+                        <br/>
+                        <h2 className="titlePage">Men</h2>
+                    </MDBCol>
+                </MDBRow>
                 <MDBRow>
                     {mensFromDb.map((c, i) =>
                         <MDBCol>
