@@ -16,7 +16,6 @@ function Logout() {
     return (
         <div>
             <h1>Welcome</h1>
-
             <button
                 className="profile-box-logout"
                 type="submit"
