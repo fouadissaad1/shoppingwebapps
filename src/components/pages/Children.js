@@ -62,6 +62,7 @@ export function Children() {
         console.log(childeren);
         setChilderenFromDb(childeren);
     }
+
     useEffect(() => {
         LoadChilderen();
     }, [])
@@ -88,7 +89,7 @@ export function Children() {
                     {
                         childerenFromDb.map((c, i) =>
                             <MDBCol>
-                                <Childs childs={c} key={i} />
+                                <Childs childs={c} key={i}/>
                             </MDBCol>)
                     }
                 </MDBRow>
